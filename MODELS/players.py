@@ -1,11 +1,21 @@
-with open('../Data/new-tournament/currentDate') as user_file:
-  file_contents = user_file.read()
+class Player:
+
+    def __init__(self, familyName, firstName, birthDate, NationalIdentifier):
+        self.familyName = familyName
+        self.firstName = firstName
+        self.birthDate = birthDate
+        self.NationalIdentifier = NationalIdentifier
   
-print(file_contents)
-# {
-#   "name": "John",
-#   "age": 50,
-#   "is_married": false,
-#   "profession": null,
-#   "hobbies": ["travelling", "photography"]
-# }
+    #-----------------------------------------------------------------------
+    #        Methods
+    #-----------------------------------------------------------------------
+
+
+    # def add
+    # def getAll
+    # def get
+    # def update
+    # def delete
+
+    # set a list opf players for a new tournament from the database
+
