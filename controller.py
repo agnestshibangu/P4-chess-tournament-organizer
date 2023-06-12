@@ -37,10 +37,11 @@ def create_a_tournament(nb_of_players):
     newTournament = Tournament("Tournament", nb_of_players)
     nb_of_players = newTournament.number_of_players
     tours =  controllerTour.create_list_of_tours(nb_of_players)
-    print(tours)
     for tour in tours:
-        print('hello')    
-
+        i = 1
+        while i < tour._number_of_matchs:
+            
+    
 
 
     # newMatch = Match("nouveau match")
