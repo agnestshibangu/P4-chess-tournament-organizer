@@ -14,4 +14,3 @@ def create_list_of_matchs(nb_matchs):
     # print(tours)
     return matchs
 
-create_list_of_matchs(16)

@@ -17,5 +17,3 @@ def create_list_of_tours(nb_players):
     # print(tours)
     return tours
 
-create_list_of_tours(16)
-

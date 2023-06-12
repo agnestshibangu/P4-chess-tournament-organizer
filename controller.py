@@ -4,18 +4,15 @@ from MODELS.tour import Tour
 from MODELS.match import Match
 import controllerTournament
 import controllerTour
+import controllerMatch
 
 import sys
-
 
 # --- creer un nouveau tournois  : TOURNOI
 #     --- la création du tounois engendre x tours en fonction du nombre de participants TOUR
 #         --- chaque tour créer x matchs MATCH 
 #             --- chaque match retourne un resultat
 #     --- on redistribue le nombre de joueurs restants en fonction des resultats 
-
-
-
 
 def start_tournament():
     while True:         
@@ -36,17 +33,14 @@ def start_tournament():
 def create_a_tournament(nb_of_players):
     newTournament = Tournament("Tournament", nb_of_players)
     nb_of_players = newTournament.number_of_players
+    # créé un certain nombre de tours en fonction du nombre de participants
     tours =  controllerTour.create_list_of_tours(nb_of_players)
+    print(tours)
     for tour in tours:
-        i = 1
-        while i < tour._number_of_matchs:
-            
-    
-
-
-    # newMatch = Match("nouveau match")
-
-
+        nb_matchs = tour._number_of_matchs
+        # créé x matchs par tour
+        matchs = controllerMatch.create_list_of_matchs(nb_matchs)
+        print(matchs)
 
 start_tournament()
 
