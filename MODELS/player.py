@@ -1,14 +1,16 @@
 class Player:
 
-    def __init__(self, familyName, firstName, birthDate, NationalIdentifier):
-        self.familyName = familyName
-        self.firstName = firstName
-        self.birthDate = birthDate
-        self.NationalIdentifier = NationalIdentifier
+    def __init__(self, number):
+    # def __init__(self, familyName, firstName, birthDate, NationalIdentifier):
+        self._number = number
+        # self._firstName = firstName
+        # self._birthDate = birthDate
+        # self._NationalIdentifier = NationalIdentifier
   
     #-----------------------------------------------------------------------
     #        Methods
     #-----------------------------------------------------------------------
+
 
 
     # def add

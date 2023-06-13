@@ -1,16 +1,21 @@
 
 class Match:
 
-    def __init__(self, name):
+    #def __init__(self, name):
+    def __init__(self, name, array):
         self._name = name
-
+        self._array = array
+    
 #-----------------------------------------------------------------------
 #        Methods
 #-----------------------------------------------------------------------
 
-    @property
-    def match_name(self):
-        print(f'"{self._name}" was accessed.')
+    # @property
+    # def match_name(self):
+    #     print(f'"{self._name}" was accessed.')
+
+# match = Match("maaatch",array = [])
+# print(match._array)
 
     
 # def add

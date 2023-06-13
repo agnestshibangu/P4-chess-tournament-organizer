@@ -5,8 +5,22 @@ from MODELS.match import Match
 import controllerTournament
 import controllerTour
 import controllerMatch
+import controllerPlayer
 
+from MODELS.playersData import json_string
+from MODELS.player import Player
 import sys
+import json 
+
+# ######################################
+
+##### convertir fichier json en liste #####
+data = json.loads(json_string)
+players_list = data['players']
+# ###########################################
+
+
+
 
 # --- creer un nouveau tournois  : TOURNOI
 #     --- la création du tounois engendre x tours en fonction du nombre de participants TOUR
@@ -20,7 +34,7 @@ def start_tournament():
         data = input()   
         if data == 'Y':
             print('starting a new tournament...')
-            nb_of_players = controllerTournament.number_of_player()
+            nb_of_players = len(players_list)
             break
         elif data == 'N':
             print('good bye !')
@@ -31,18 +45,27 @@ def start_tournament():
     create_a_tournament(nb_of_players)
 
 def create_a_tournament(nb_of_players):
+    controllerPlayer.create_list_of_players(players_list)
     newTournament = Tournament("Tournament", nb_of_players)
     nb_of_players = newTournament.number_of_players
-    # créé un certain nombre de tours en fonction du nombre de participants
+    # # créé un certain nombre de tours en fonction du nombre de participants
     tours =  controllerTour.create_list_of_tours(nb_of_players)
+    print(' ')
     print(tours)
+    print(len(tours))
     for tour in tours:
-        nb_matchs = tour._number_of_matchs
-        # créé x matchs par tour
-        matchs = controllerMatch.create_list_of_matchs(nb_matchs)
-        print(matchs)
-
+    #     # créé x matchs par tour
+        if tour._name == 'tour_n°1':
+            print('c est le premier tour donc on melange les joueurs au hasard')
+            matchs = controllerMatch.generate_pairs(players_list)
+            tour._array_of_matches.append(matchs)
+            print(tour._array_of_matches)
+        else : 
+            # controllerMatch.retreive_scores_for_each_match(tour)
+            print('hello')
 start_tournament()
+
+
 
 
 

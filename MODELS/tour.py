@@ -22,9 +22,10 @@
 
 class Tour:
 
-    def __init__(self, name, number_of_matchs):
+    def __init__(self, name, number_of_matchs, array_of_matches):
         self._name = name
         self._number_of_matchs = number_of_matchs
+        self._array_of_matches = array_of_matches
 
 #-----------------------------------------------------------------------
 #        Methods
