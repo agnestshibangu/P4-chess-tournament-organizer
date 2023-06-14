@@ -22,6 +22,7 @@ def create_list_of_players(players_list):
     return players
 
 
+
 # def generate_pairs():
 #     number_of_players = len(players_list)
 #     number_of_pairs = round(number_of_players / 2)

@@ -45,7 +45,8 @@ def start_tournament():
     create_a_tournament(nb_of_players)
 
 def create_a_tournament(nb_of_players):
-    controllerPlayer.create_list_of_players(players_list)
+    players = controllerPlayer.create_list_of_players(players_list)
+    nb_of_players = len(players)
     newTournament = Tournament("Tournament", nb_of_players)
     nb_of_players = newTournament.number_of_players
     # # créé un certain nombre de tours en fonction du nombre de participants
@@ -57,7 +58,8 @@ def create_a_tournament(nb_of_players):
     #     # créé x matchs par tour
         if tour._name == 'tour_n°1':
             print('c est le premier tour donc on melange les joueurs au hasard')
-            matchs = controllerMatch.generate_pairs(players_list)
+            # matchs = controllerMatch.generate_pairs_for_first_tour(players_list)
+            matchs = controllerMatch.generate_pairs_for_first_tour(players)
             tour._array_of_matches.append(matchs)
             print(tour._array_of_matches)
         else : 
