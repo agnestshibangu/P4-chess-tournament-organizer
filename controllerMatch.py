@@ -17,43 +17,48 @@ players_list = data['players']
 def create_list_of_players(players_list):
     players = []
     i = 1
+    score =  0
     for player in players_list:
-            player = Player('player_n°' + str(i))
+            player = Player('player_n°' + str(i), score)
+            # print(player)
             players.append(player)
-            print(player)
+            player.player_number
+            player.player_score
             i = i + 1
     return players
 ###########################################
 
 players = create_list_of_players(players_list)
+print(players)
 
 # choose two players and create a tuple
 def chooseTwoPlayers(players):
+    print(players)
+    print('blabla')
     two_players_array = []
     player1 = []
     player2 = []
-    player1Score = []
-    player2Score = []
     y = 1
     for y in range(2):
         # print('y value : ' + str(y))
         # on itere sur le tableau player donc on est sensé avoir un player en tant qu'objet
         choosen_player = random.choice(players)
-        print(choosen_player)
+        print('choosen player' + str(choosen_player.player_score))
         players.remove(choosen_player)
         if y == 0:
             player1.append(choosen_player)
-            player1.append(player1Score)
+            print(player1)
             two_players_array.append(player1)
         elif y == 1:
             player2.append(choosen_player)
-            player2.append(player2Score)
             two_players_array.append(player2)
         y = y + 1
     # print('two player array')
     # print(two_players_array)
     return two_players_array
-    # print(' ')
+    print(' ')
+
+chooseTwoPlayers(players)
 
 # genere les matchs pour un tour 
 def generate_pairs_for_first_tour(players):
@@ -73,11 +78,9 @@ def generate_pairs_for_first_tour(players):
         print(match._name)
         print(match._array)
 
+# first_tour_list_matches = generate_pairs_for_first_tour(players)
 
-first_tour_list_matches = generate_pairs_for_first_tour(players)
-
-def retreive_score(first_tour_list_matches):
-
+# def retreive_score(first_tour_list_matches):
 
 
 
@@ -86,7 +89,8 @@ def retreive_score(first_tour_list_matches):
 
 
 
-    
+
+
 
 # def retreive_scores_for_each_match(tour):
 #     nextTourWinners = []
