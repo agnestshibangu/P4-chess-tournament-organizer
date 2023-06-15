@@ -4,7 +4,7 @@ from MODELS.playersData import json_string
 # from getkey import getkey, key
 
 import random
-import json 
+import json
 
 # ######################################
 ##### convertir fichier json en liste #####
@@ -15,6 +15,7 @@ players_list = data['players']
 
 ##### fonction pour le test a retirer #####
 def create_list_of_players(players_list):
+    global players
     players = []
     i = 1
     score =  0
@@ -29,56 +30,50 @@ def create_list_of_players(players_list):
 ###########################################
 
 players = create_list_of_players(players_list)
+print('playeeeeeeeeeeeers')
 print(players)
 
 # choose two players and create a tuple
 def chooseTwoPlayers(players):
-    print(players)
     print('blabla')
     two_players_array = []
     player1 = []
     player2 = []
     y = 1
     for y in range(2):
-        # print('y value : ' + str(y))
-        # on itere sur le tableau player donc on est sensé avoir un player en tant qu'objet
         choosen_player = random.choice(players)
-        print('choosen player' + str(choosen_player.player_score))
+        print('choosen player' + str(choosen_player))
         players.remove(choosen_player)
         if y == 0:
             player1.append(choosen_player)
-            print(player1)
             two_players_array.append(player1)
         elif y == 1:
             player2.append(choosen_player)
             two_players_array.append(player2)
         y = y + 1
-    # print('two player array')
-    # print(two_players_array)
     return two_players_array
     print(' ')
 
-chooseTwoPlayers(players)
 
-# genere les matchs pour un tour 
+# genere les matchs pour un tour
 def generate_pairs_for_first_tour(players):
 # def generate_pairs_for_first_tour(players):
-    number_of_players = len(players_list)
+    number_of_players = len(players)
     number_of_pairs = round(number_of_players / 2)
     tour = []
-    y = 1
-    i = 1 
-    for x in range(number_of_pairs): 
-        array = chooseTwoPlayers(players_list)
+    i = 1
+    for x in range(number_of_pairs):
+        array = chooseTwoPlayers(players)
         match = Match('match_n°' + str(i), array)
         tour.append(match)
         i = i + 1
     print(tour)
-    for match in tour:
-        print(match._name)
-        print(match._array)
+    # for match in tour:
+    #     print(match._array)
+    #     print(match._array[0][0]._number)
+    #     print(match._array[1][0]._number)
 
-# first_tour_list_matches = generate_pairs_for_first_tour(players)
+first_tour_list_matches = generate_pairs_for_first_tour(players)
 
 # def retreive_score(first_tour_list_matches):
 
@@ -102,7 +97,7 @@ def generate_pairs_for_first_tour(players):
 #         player2 = match._array[1]
 #         print(' ')
 #         print('qui a gagné ce match ? ')
-#         data = input()   
+#         data = input()
 #         if data == '1':
 #             nextTourWinners.append(player1)
 #             print('player 1 participera au prochain tour ! ')
