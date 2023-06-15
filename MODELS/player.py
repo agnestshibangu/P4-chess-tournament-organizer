@@ -36,6 +36,15 @@ class Player:
     def player_score(self):
         print(f'{self._score}" player s number was accessed.')
         return self._score
+    
+    @player_score.setter
+    def player_score(self, value):
+        print(f'{self._score} is now "{value}"')
+        self._score = value
+    
+    
+    
+    
 
     # @player_score.setter
     # def player_score(self, value):

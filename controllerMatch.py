@@ -21,7 +21,6 @@ def create_list_of_players(players_list):
     score =  0
     for player in players_list:
             player = Player('player_n°' + str(i), score)
-            # print(player)
             players.append(player)
             player.player_number
             player.player_score
@@ -30,19 +29,17 @@ def create_list_of_players(players_list):
 ###########################################
 
 players = create_list_of_players(players_list)
-print('playeeeeeeeeeeeers')
-print(players)
 
 # choose two players and create a tuple
 def chooseTwoPlayers(players):
-    print('blabla')
+   # print('blabla')
     two_players_array = []
     player1 = []
     player2 = []
     y = 1
     for y in range(2):
         choosen_player = random.choice(players)
-        print('choosen player' + str(choosen_player))
+        # print('choosen player' + str(choosen_player))
         players.remove(choosen_player)
         if y == 0:
             player1.append(choosen_player)
@@ -52,7 +49,7 @@ def chooseTwoPlayers(players):
             two_players_array.append(player2)
         y = y + 1
     return two_players_array
-    print(' ')
+
 
 
 # genere les matchs pour un tour
@@ -67,7 +64,7 @@ def generate_pairs_for_first_tour(players):
         match = Match('match_n°' + str(i), array)
         tour.append(match)
         i = i + 1
-    print(tour)
+    return tour
     # for match in tour:
     #     print(match._array)
     #     print(match._array[0][0]._number)
@@ -75,13 +72,30 @@ def generate_pairs_for_first_tour(players):
 
 first_tour_list_matches = generate_pairs_for_first_tour(players)
 
-# def retreive_score(first_tour_list_matches):
+def retreive_single_score(player):
+    print(player[0]._number)
+    print(player[0]._score)
 
 
+def get_all_scores(first_tour_list_matches):
+    for match in first_tour_list_matches:
+        print('----------')
+        print(match._name)
+        for player in match._array:
+            retreive_single_score(player)
+        print('----------')
+
+get_all_scores(first_tour_list_matches)
+            
 
 
-
-
+        # print("Entrez le score du joueur: ")    
+        # score = input()   
+        # if data == '1':
+        #     print('starting a new tournament...')
+        #     nb_of_players = len(players_list)
+        # print(match._array[0][0]._score)
+        # print(match._array[1][0]._score)
 
 
 
