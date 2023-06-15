@@ -19,32 +19,13 @@ data = json.loads(json_string)
 players_list = data['players']
 # ###########################################
 
-
-
-
 # --- creer un nouveau tournois  : TOURNOI
 #     --- la création du tounois engendre x tours en fonction du nombre de participants TOUR
 #         --- chaque tour créer x matchs MATCH 
 #             --- chaque match retourne un resultat
-#     --- on redistribue le nombre de joueurs restants en fonction des resultats 
+#     --- on redistribue le nombre de joueurs restants en fonction des resultats \
 
-def start_tournament():
-    while True:         
-        print("Voulez-vous démarrer un tournoi ? [Y/N]")    
-        data = input()   
-        if data == 'Y':
-            print('starting a new tournament...')
-            nb_of_players = len(players_list)
-            break
-        elif data == 'N':
-            print('good bye !')
-            sys.exit()
-        else:
-            print('invalide answer')
-    # créer un objet tournoi 
-    create_a_tournament(nb_of_players)
-
-def create_a_tournament(nb_of_players):
+def create_a_tournament():
     players = controllerPlayer.create_list_of_players(players_list)
     nb_of_players = len(players)
     newTournament = Tournament("Tournament", nb_of_players)
@@ -53,19 +34,27 @@ def create_a_tournament(nb_of_players):
     tours =  controllerTour.create_list_of_tours(nb_of_players)
     print(' ')
     print(tours)
-    print(len(tours))
     for tour in tours:
     #     # créé x matchs par tour
         if tour._name == 'tour_n°1':
             print('c est le premier tour donc on melange les joueurs au hasard')
-            # matchs = controllerMatch.generate_pairs_for_first_tour(players_list)
-            matchs = controllerMatch.generate_pairs_for_first_tour(players)
-            tour._array_of_matches.append(matchs)
+            first_tour_list_matches = controllerMatch.generate_pairs_for_first_tour(players)
+            for match in first_tour_list_matches :
+                tour._array_of_matches.append(match)
             print(tour._array_of_matches)
+            # on récupère les vainqueurs du premier match
+            first_tour_selected_players = controllerTour.get_first_tour_scores(first_tour_list_matches)
+            print('je suis dans le controller, voici la liste des gagnants du premier tour') 
+            print(first_tour_selected_players)
         else : 
             # controllerMatch.retreive_scores_for_each_match(tour)
             print('hello')
-start_tournament()
+            print(tour._name)
+            controllerMatch.generate_pairs_for_tours(first_tour_selected_players)
+
+controllerTournament.start_tournament()
+create_a_tournament() 
+
 
 
 

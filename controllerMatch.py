@@ -28,7 +28,7 @@ def create_list_of_players(players_list):
     return players
 ###########################################
 
-players = create_list_of_players(players_list)
+# players = create_list_of_players(players_list)
 
 # choose two players and create a tuple
 def chooseTwoPlayers(players):
@@ -42,12 +42,11 @@ def chooseTwoPlayers(players):
         # print('choosen player' + str(choosen_player))
         players.remove(choosen_player)
         if y == 0:
-            player1.append(choosen_player)
-            two_players_array.append(player1)
+            two_players_array.append(choosen_player)
         elif y == 1:
-            player2.append(choosen_player)
-            two_players_array.append(player2)
+            two_players_array.append(choosen_player)
         y = y + 1
+    print(two_players_array)
     return two_players_array
 
 
@@ -61,83 +60,20 @@ def generate_pairs_for_first_tour(players):
     i = 1
     for x in range(number_of_pairs):
         array = chooseTwoPlayers(players)
-        match = Match('match_n°' + str(i), array)
+        match = Match('MATCH_N°' + str(i), array)
         tour.append(match)
         i = i + 1
-    return tour
-    # for match in tour:
-    #     print(match._array)
-    #     print(match._array[0][0]._number)
-    #     print(match._array[1][0]._number)
-
-first_tour_list_matches = generate_pairs_for_first_tour(players)
-
-def retreive_single_score(player):
-    print(player[0]._number)
-    print(player[0]._score)
-
-
-def get_all_scores(first_tour_list_matches):
-    for match in first_tour_list_matches:
-        print('----------')
+    for match in tour:
         print(match._name)
-        for player in match._array:
-            retreive_single_score(player)
-        print('----------')
-
-get_all_scores(first_tour_list_matches)
-            
+        print(match._array)
+    return tour
 
 
-        # print("Entrez le score du joueur: ")    
-        # score = input()   
-        # if data == '1':
-        #     print('starting a new tournament...')
-        #     nb_of_players = len(players_list)
-        # print(match._array[0][0]._score)
-        # print(match._array[1][0]._score)
+# on créé une fonction qui classe les joueurs et génère les paires pour les tours autre que le premier tour
+def generate_pairs_for_tours(first_tour_selected_players):
+    print(first_tour_selected_players)
+     
 
 
 
 
-
-# def retreive_scores_for_each_match(tour):
-#     nextTourWinners = []
-#     for match in tour:
-#         print(' ')
-#         print(match._name)
-#         print(match._array)
-#         player1 = match._array[0]
-#         player2 = match._array[1]
-#         print(' ')
-#         print('qui a gagné ce match ? ')
-#         data = input()
-#         if data == '1':
-#             nextTourWinners.append(player1)
-#             print('player 1 participera au prochain tour ! ')
-#         elif data == '2':
-#             nextTourWinners.append(player2)
-#             print('player 2 participera au prochain tour ! ')
-#         else:
-#             print('invalide answer')
-#     print(nextTourWinners)
-
-
-# tour = generate_pairs_for_first_tour(players_list)
-# for match in tour:
-#     print(match._array)
-
-# tour = generate_pairs(players_list)
-
-# retreive_scores_for_each_match(tour)
-
-
-
-
-# print("press enter")
-# var = getkey()
-
-# if var == key.ENTER:
-#   print("You pressed enter")
-# else:
-#   print("You didnt")

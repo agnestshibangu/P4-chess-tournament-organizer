@@ -16,7 +16,7 @@ class Player:
 
     @property
     def player_number(self):
-        print(f'{self._number}" score was accessed.')
+        print(f'{self._number}" number was accessed.')
         return self._number
 
     @player_number.setter
@@ -34,7 +34,7 @@ class Player:
 
     @property
     def player_score(self):
-        print(f'{self._score}" player s number was accessed.')
+        print(f'"{self._score}" player s score was accessed.')
         return self._score
     
     @player_score.setter

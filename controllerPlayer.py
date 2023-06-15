@@ -15,11 +15,12 @@ def create_list_of_players(players_list):
     players = []
     i = 1
     for player in players_list:
-            player = Player('player_n°' + str(i))
+            player = Player('player_n°' + str(i), 0)
             players.append(player)
             print(player._number)
             i = i + 1
     return players
+
 
 
 
