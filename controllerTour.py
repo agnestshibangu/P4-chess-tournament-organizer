@@ -27,28 +27,82 @@ def retreive_single_score(player):
         player.player_score += 1
         player.player_score
         print(' ')
-    # if result == 'TIE':
-    #     print('PARTIE NULLE')
-    #     player[0].player_score += 0.5
-    #     player[0].player_score
-    #     print(' ')
+    if result == 't':
+        print('PARTIE NULLE')
+        player.player_score += 0.5
+        player.player_score
+        print(' ')
     if result == 'l':
         print('CE JOUEUR A PERDU')
         player.player_score
         print(' ')
     return player
 
+
+# def largest(arr, n):
+
+# def largest(score):
+#     print(score)
+#     print('bla')
+#     arr = [10, 324, 45, 90, 9808]
+    # max = array_sort[0]
+    # n = len(array_sort)
+    # for i in range(1,n):
+    #     if array_sort[i] > max:
+    #         max = array_sort[i]
+    # return max
+
+
+# largest()
+
+
+
 # cette fonction itère sur les matchs du premier tour, récupère les scores de chaque joueurs et créé un tableau des joueurs séléctionnés
 def get_first_tour_scores(first_tour_list_matches):
     # tableau des joueurs gagnants du premier tour
+    players_list = []
+    selected = []
     first_tour_array_selected = []
     for match in first_tour_list_matches:
         print('----------')
+        match_array_scores =  match._array
         print(match._name)
-        for player in match._array:
+        # génère un tqbleau qui récuppère tout les scores pour pouvoir les trier et récupèrer les scores les plus élevés
+        for player in  match_array_scores:
             retreive_single_score(player)
-            if player._score == 1 :
-                first_tour_array_selected.append(player)
-    print(first_tour_array_selected)
+            players_list.append(player)
+    print(players_list)
+    for player in players_list:
+        player.player_score
+        
+  
+        
+            
+
+    
+           
+
+              
+
+
+                    
+
+
+    #             if player._score == 0.5 : 
+    #                 first_tour_array_selected.append(player)
+    #             if player._score == 0 : 
+    #                 first_tour_array_selected.append(player)
+    #         print(first_tour_array_selected)
+    # for player in first_tour_array_selected:
+    #     player.player_score
+
+
+
+            
+
+
+
+
+
     print("----- la récupération des points pour ce tour est terminée ----- ")
     return first_tour_array_selected

@@ -45,22 +45,3 @@ class Player:
     
     
     
-
-    # @player_score.setter
-    # def player_score(self, value):
-    #     print(f'{self._score} is now "{value}"')
-    #     self._score = value
-
-    # @player_score.deleter
-    # def player_score(self):
-    #     print(f'"{self._score}" was deleted')
-    #     del self._score
-
-
-
-# player = Player('player_n°', 5)
-# player.player_score
-# del player.player_score
-# player._score = 90
-# player.player_score
-

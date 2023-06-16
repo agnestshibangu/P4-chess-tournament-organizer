@@ -44,8 +44,8 @@ def create_a_tournament():
             print(tour._array_of_matches)
             # on récupère les vainqueurs du premier match
             first_tour_selected_players = controllerTour.get_first_tour_scores(first_tour_list_matches)
-            print('je suis dans le controller, voici la liste des gagnants du premier tour') 
-            print(first_tour_selected_players)
+            # print('je suis dans le controller, voici la liste des gagnants du premier tour') 
+            # print(first_tour_selected_players)
         else : 
             # controllerMatch.retreive_scores_for_each_match(tour)
             print('hello')
