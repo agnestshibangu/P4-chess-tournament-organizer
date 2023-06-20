@@ -39,19 +39,23 @@ def retreive_single_score(player):
     return player
 
 
-# def largest(arr, n):
-def largest(score_array, selected):
-    maximum = max(score_array)
-    print(maximum)
-    print('i am in the max function')
-    selected.append(maximum)
-    print(selected)
-    score_array.remove(maximum)
-    
-    
-   
-    
-    
+#define the highest scores and append to the array of selected players selected = []
+def largest(score_array):
+
+    max = score_array[0].get('score')
+    playyyyy = score_array[0]
+    n = len(score_array)
+
+    for i in range(1, n):
+        if score_array[i].get('score') > max:
+            max = score_array[i].get('score')
+            playyyyy = score_array[i]
+            
+
+    return playyyyy
+
+
+
 
 
 # cette fonction itère sur les matchs du premier tour, récupère les scores de chaque joueurs et créé un tableau des joueurs séléctionnés
@@ -59,7 +63,7 @@ def get_first_tour_scores(first_tour_list_matches):
     # tableau des joueurs gagnants du premier tour
     score_array = []
     selected = []
-    len_selected = len(selected)
+    # len_selected = len(selected)
     first_tour_array_selected = []
     # pour un martch de deux joueurs
     for match in first_tour_list_matches:
@@ -69,15 +73,29 @@ def get_first_tour_scores(first_tour_list_matches):
         # génère un tableau qui récuppère tout les scores pour pouvoir les trier et récupèrer les scores les plus élevés
         for player in  match_array_scores:
             retreive_single_score(player)
-            score_array.append(player.player_score)
-        print(score_array)
-    print(len_selected)
-    while len_selected < len(first_tour_list_matches):
-        largest(score_array, selected)
-        # print(len_selected)
-        # print('i am here')
-        # print(selected)
-        len_selected += 1
+            dict = {'number' : player.player_number, 'score' : player.player_score }
+            score_array.append(dict)
+    print(score_array)
+    print(score_array[0])
+    while len(selected) < len(first_tour_list_matches):
+        result = largest(score_array)
+        print('i am the result')
+        print(result)
+        score_array.remove(result)
+        selected.append(result)
+    print(selected)
+
+
+
+
+
+
+
+    # while len(selected) < len(first_tour_list_matches):
+    #     largest(score_array, selected)
+    # for score in selected:
+    #     print(score)
+
 
 
 
