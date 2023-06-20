@@ -8,7 +8,7 @@ def create_list_of_tours(nb_players):
         array = []
         tour = Tour('tour_n°' + str(i), number_of_matchs, array)
         print(tour._name)
-        print(tour._number_of_matchs)  
+        print(tour._number_of_matchs)
         print(tour._array_of_matches)
         print(tour)
         tours.append(tour)
@@ -20,8 +20,8 @@ def create_list_of_tours(nb_players):
 
 def retreive_single_score(player):
     print(player._number)
-    print("entrez le score de ce joueur [WIN/LOO/TIE]")    
-    result = input()   
+    print("entrez le score de ce joueur [WIN/LOO/TIE]")
+    result = input()
     if result == 'w':
         print('CE JOUEUR A GAGNE LA PARTIE !')
         player.player_score += 1
@@ -40,57 +40,63 @@ def retreive_single_score(player):
 
 
 # def largest(arr, n):
-
-# def largest(score):
-#     print(score)
-#     print('bla')
-#     arr = [10, 324, 45, 90, 9808]
-    # max = array_sort[0]
-    # n = len(array_sort)
-    # for i in range(1,n):
-    #     if array_sort[i] > max:
-    #         max = array_sort[i]
-    # return max
-
-
-# largest()
-
+def largest(score_array, selected):
+    maximum = max(score_array)
+    print(maximum)
+    print('i am in the max function')
+    selected.append(maximum)
+    print(selected)
+    score_array.remove(maximum)
+    
+    
+   
+    
+    
 
 
 # cette fonction itère sur les matchs du premier tour, récupère les scores de chaque joueurs et créé un tableau des joueurs séléctionnés
 def get_first_tour_scores(first_tour_list_matches):
     # tableau des joueurs gagnants du premier tour
-    players_list = []
+    score_array = []
     selected = []
+    len_selected = len(selected)
     first_tour_array_selected = []
+    # pour un martch de deux joueurs
     for match in first_tour_list_matches:
         print('----------')
         match_array_scores =  match._array
         print(match._name)
-        # génère un tqbleau qui récuppère tout les scores pour pouvoir les trier et récupèrer les scores les plus élevés
+        # génère un tableau qui récuppère tout les scores pour pouvoir les trier et récupèrer les scores les plus élevés
         for player in  match_array_scores:
             retreive_single_score(player)
-            players_list.append(player)
-    print(players_list)
-    for player in players_list:
-        player.player_score
-        
-  
-        
-            
-
-    
-           
-
-              
+            score_array.append(player.player_score)
+        print(score_array)
+    print(len_selected)
+    while len_selected < len(first_tour_list_matches):
+        largest(score_array, selected)
+        # print(len_selected)
+        # print('i am here')
+        # print(selected)
+        len_selected += 1
 
 
-                    
 
 
-    #             if player._score == 0.5 : 
+
+
+
+
+
+
+
+
+
+
+
+
+    #             if player._score == 0.5 :
     #                 first_tour_array_selected.append(player)
-    #             if player._score == 0 : 
+    #             if player._score == 0 :
     #                 first_tour_array_selected.append(player)
     #         print(first_tour_array_selected)
     # for player in first_tour_array_selected:
@@ -98,7 +104,7 @@ def get_first_tour_scores(first_tour_list_matches):
 
 
 
-            
+
 
 
 

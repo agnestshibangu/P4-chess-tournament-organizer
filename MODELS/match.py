@@ -3,7 +3,7 @@ class Match:
 
     #def __init__(self, name):
     def __init__(self, name, array):
-        self.l = name
+        self._name = name
         self._array = array
     
 #-----------------------------------------------------------------------
