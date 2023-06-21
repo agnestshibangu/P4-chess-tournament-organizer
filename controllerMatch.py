@@ -68,10 +68,28 @@ def generate_pairs_for_first_tour(players):
         print(match._array)
     return tour
 
+def generate_pairs_for_a_tour(players):
+# def generate_pairs_for_first_tour(players):
+    number_of_players = len(players)
+    number_of_pairs = round(number_of_players / 2)
+    tour = []
+    i = 1
+    for x in range(number_of_pairs):
+        array = chooseTwoPlayers(players)
+        match = Match('MATCH_N°' + str(i), array)
+        tour.append(match)
+        i = i + 1
+    for match in tour:
+        print(match._name)
+        print(match._array)
+    return tour
 
-# on créé une fonction qui classe les joueurs et génère les paires pour les tours autre que le premier tour
-def generate_pairs_for_tours(first_tour_selected_players):
-    print(first_tour_selected_players)
+
+
+
+# # on créé une fonction qui classe les joueurs et génère les paires pour les tours autre que le premier tour
+# def generate_pairs_for_tours(first_tour_selected_players):
+#     print(first_tour_selected_players)
      
 
 

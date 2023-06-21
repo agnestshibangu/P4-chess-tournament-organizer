@@ -10,12 +10,20 @@ class Match:
 #        Methods
 #-----------------------------------------------------------------------
 
-    # @property
-    # def match_name(self):
-    #     print(f'"{self._name}" was accessed.')
+   
+    @property
+    def match_name(self):
+        print(f'{self._name}" was accessed.')
+        return self._name
 
-# match = Match("maaatch",array = [])
-# print(match._array)
+    @match_name.setter
+    def match_name(self, value):
+        print(f'{self._name} is now "{value}"')
+        self._name = value
+
+    @match_name.deleter
+    def match_name(self):
+        print(f'"{self._name}" was deleted')
 
     
 # def add

@@ -19,7 +19,7 @@ def create_list_of_tours(nb_players):
 
 
 def retreive_single_score(player):
-    print(player._number)
+    print(player.player_number)
     print("entrez le score de ce joueur [WIN/LOO/TIE]")
     result = input()
     if result == 'w':
@@ -43,90 +43,55 @@ def retreive_single_score(player):
 def largest(score_array):
 
     max = score_array[0].get('score')
-    playyyyy = score_array[0]
+    selected_player  = score_array[0]
     n = len(score_array)
 
     for i in range(1, n):
         if score_array[i].get('score') > max:
             max = score_array[i].get('score')
-            playyyyy = score_array[i]
-            
+            selected_player = score_array[i]
+    return  selected_player
 
-    return playyyyy
-
+def sort_players_list_object(tour_array_selected, copy_list_player):
+    
+    n = len(tour_array_selected)
+    array_sele = []
+    for player in copy_list_player:
+        for i in range(0, n):
+            if player.player_number == tour_array_selected[i].get('number'): 
+                array_sele.append(player)
+    print(array_sele)
+    for player in array_sele:
+        player.player_score
 
 
 
 
 # cette fonction itère sur les matchs du premier tour, récupère les scores de chaque joueurs et créé un tableau des joueurs séléctionnés
-def get_first_tour_scores(first_tour_list_matches):
+def get_tour_scores(tour_list_matches):
     # tableau des joueurs gagnants du premier tour
     score_array = []
-    selected = []
-    # len_selected = len(selected)
-    first_tour_array_selected = []
+    tour_array_selected = []
+    copy_list_player = []
     # pour un martch de deux joueurs
-    for match in first_tour_list_matches:
+    for match in tour_list_matches:
         print('----------')
         match_array_scores =  match._array
-        print(match._name)
         # génère un tableau qui récuppère tout les scores pour pouvoir les trier et récupèrer les scores les plus élevés
-        for player in  match_array_scores:
+        for player in match_array_scores:
             retreive_single_score(player)
+            # créer une copie de la liste player 
+            copy_list_player.append(player)
             dict = {'number' : player.player_number, 'score' : player.player_score }
             score_array.append(dict)
-    print(score_array)
-    print(score_array[0])
-    while len(selected) < len(first_tour_list_matches):
+    while len(tour_array_selected) < len(tour_list_matches):
         result = largest(score_array)
-        print('i am the result')
-        print(result)
         score_array.remove(result)
-        selected.append(result)
-    print(selected)
-
-
-
-
-
-
-
-    # while len(selected) < len(first_tour_list_matches):
-    #     largest(score_array, selected)
-    # for score in selected:
-    #     print(score)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    #             if player._score == 0.5 :
-    #                 first_tour_array_selected.append(player)
-    #             if player._score == 0 :
-    #                 first_tour_array_selected.append(player)
-    #         print(first_tour_array_selected)
-    # for player in first_tour_array_selected:
-    #     player.player_score
-
-
-
-
-
-
-
-
-
+        tour_array_selected.append(result)
+    sort_players_list_object(tour_array_selected, copy_list_player)
     print("----- la récupération des points pour ce tour est terminée ----- ")
-    return first_tour_array_selected
+    return tour_array_selected
+
+
+  
+    
