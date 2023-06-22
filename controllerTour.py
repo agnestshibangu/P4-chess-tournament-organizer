@@ -1,5 +1,10 @@
 from MODELS.tour import Tour
 
+
+
+#_________________________________________________________________________________________________#
+
+
 def create_list_of_tours(nb_players):
     tours = []
     i = 1
@@ -17,6 +22,10 @@ def create_list_of_tours(nb_players):
     # print('since there are ' + str(initial_number_of_players) + ' players, ' + str(len(tours)) + ' rounds have been created')
     return tours
 
+
+#_________________________________________________________________________________________________#
+
+#_________________________________________________________________________________________________#
 
 def retreive_single_score(player):
     print(player.player_number)
@@ -38,7 +47,6 @@ def retreive_single_score(player):
         print(' ')
     return player
 
-
 #define the highest scores and append to the array of selected players selected = []
 def largest(score_array):
 
@@ -51,8 +59,6 @@ def largest(score_array):
             max = score_array[i].get('score')
             selected_player = score_array[i]
     return  selected_player
-
-
 
 
 def sort_players_list_object(tour_array_selected, copy_list_player):
@@ -90,6 +96,7 @@ def get_tour_scores(tour_list_matches):
     print("----- la récupération des points pour ce tour est terminée ----- ")
     return array_selected 
 
+#_________________________________________________________________________________________________#
 
 
 

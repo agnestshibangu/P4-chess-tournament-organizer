@@ -37,8 +37,9 @@ def create_a_tournament():
     print(' ')
     print(tours)
     while nb_of_players > 1:
-        if nb_of_players == 1:
-            break
+
+        if newTournament.tournament_number_of_players == 1:
+            sys.exit()
         for tour in tours:
         #     # créé x matchs par tour
             if tour._name == 'tour_n°1':
@@ -67,19 +68,12 @@ def create_a_tournament():
                 print(first_tour_selected_players)
                 selected_players = first_tour_selected_players
                 newTournament.tournament_number_of_players = len(selected_players)
-                newTournament.tournament_number_of_players
                 print('---------------------------')
-                print('LE PREMIER TOUR' + str(tour._name) + 'EST TERMINE')
+                print('LE TOUR' + str(tour._name) + 'EST TERMINE')
                 print('---------------------------')
-            
-            
-
-            # list of players = tournament.list
-            # while  newTournament.tournament_number_of_players != 1
-            # generate new tour 
-            # retreive winners list
-            # set list player tournament = winners list
-            # controllerMatch.generate_pairs_for_tours(first_tour_selected_players)
+                print('the number of players is ')
+                print(newTournament.tournament_number_of_players)
+                
 controllerTournament.start_tournament()
 create_a_tournament() 
 

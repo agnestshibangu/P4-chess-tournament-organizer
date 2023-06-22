@@ -11,6 +11,9 @@ data = json.loads(json_string)
 players_list = data['players']
 # ###########################################
 
+
+#_________________________________________________________________________________________________#
+
 def create_list_of_players(players_list):
     players = []
     i = 1
@@ -23,26 +26,4 @@ def create_list_of_players(players_list):
     return players
 
 
-
-
-# def generate_pairs():
-#     number_of_players = len(players_list)
-#     number_of_pairs = round(number_of_players / 2)
-#     tour = []
-
-#     y = 1
-#     for x in range(number_of_pairs):
-#         matchName = str('Match' + str(y))
-#         newMatch = []
-#         newMatch.append(matchName)
-#         for i in range(2):
-#             choosen_player = random.choice(players_list)
-#             newMatch.append(choosen_player)
-#             players_list.remove(choosen_player)
-#             i = i + 1
-#         tour.append(newMatch)
-#         print(newMatch)
-#         y = y + 1
-#     print(' ')
-
-
+#_________________________________________________________________________________________________#

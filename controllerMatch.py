@@ -28,6 +28,11 @@ def create_list_of_players(players_list):
     return players
 ###########################################
 
+
+#_________________________________________________________________________________________________#
+
+# pour le premier tour, on peut choisir les joueurs au hasard
+
 # players = create_list_of_players(players_list)
 
 # choose two players and create a tuple
@@ -48,6 +53,17 @@ def chooseTwoPlayers(players):
         y = y + 1
     print(two_players_array)
     return two_players_array
+
+
+#_________________________________________________________________________________________________#
+
+# pour les tours suivants on classe les joueurs : 
+#   * en fonction du nombre de points
+#   * associer les joueurs dans l'ordre 
+#   * si plus de 2 joueurs ont le meme score, on les associent au hasard
+#   * éviter les matchs identiques 
+
+
 
 
 
@@ -85,13 +101,7 @@ def generate_pairs_for_a_tour(players):
     return tour
 
 
-
-
-# # on créé une fonction qui classe les joueurs et génère les paires pour les tours autre que le premier tour
-# def generate_pairs_for_tours(first_tour_selected_players):
-#     print(first_tour_selected_players)
-     
-
+#_________________________________________________________________________________________________#
 
 
 
