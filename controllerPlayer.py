@@ -19,7 +19,7 @@ def create_list_of_players(players_list):
     i = 1
     for player in players_list:
             # player = Player('player_n°' + str(i), 0)
-            player = Player(str(i), 0)
+            player = Player(str(i), 0, [])
             players.append(player)
             print(player._number)
             i = i + 1

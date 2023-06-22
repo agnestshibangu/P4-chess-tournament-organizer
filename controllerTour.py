@@ -28,23 +28,26 @@ def create_list_of_tours(nb_players):
 #_________________________________________________________________________________________________#
 
 def retreive_single_score(player):
-    print(player.player_number)
-    print("entrez le score de ce joueur [WIN/LOO/TIE]")
-    result = input()
-    if result == 'w':
-        print('CE JOUEUR A GAGNE LA PARTIE !')
-        player.player_score += 1
-        player.player_score
-        print(' ')
-    if result == 't':
-        print('PARTIE NULLE')
-        player.player_score += 0.5
-        player.player_score
-        print(' ')
-    if result == 'l':
-        print('CE JOUEUR A PERDU')
-        player.player_score
-        print(' ')
+    while True: 
+        print(player.player_number)
+        print("entrez le score de ce joueur [WIN/LOO/TIE]")
+        result = input()
+        if result == 'w':
+            print('CE JOUEUR A GAGNE LA PARTIE !')
+            player.player_score += 1
+            player.player_score
+            print(' ')
+        elif result == 't':
+            print('PARTIE NULLE')
+            player.player_score += 0.5
+            player.player_score
+            print(' ')
+        elif result == 'l':
+            print('CE JOUEUR A PERDU')
+            player.player_score
+            print(' ')
+        else: 
+            print("WRONG DATA. TRY AGAIN")
     return player
 
 #define the highest scores and append to the array of selected players selected = []

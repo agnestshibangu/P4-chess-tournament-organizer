@@ -64,6 +64,40 @@ def chooseTwoPlayers(players):
 #   * éviter les matchs identiques 
 
 
+# choose two players and create a tuple
+def chooseTwoPlayers(players):
+    print('i al in the players arraaaaaaaaaaaaaaaaaaaaaaaaaaay')
+    print(players)
+    for player in players:
+        player.player_number
+    print('i al in the players arraaaaaaaaaaaaaaaaaaaaaaaaaaay')
+
+    # two_players_array = []
+    # player1 = []
+    # player2 = []
+    # y = 1
+    # for y in range(2):
+    #     choosen_player = random.choice(players)
+    #     # print('choosen player' + str(choosen_player))
+    #     players.remove(choosen_player)
+    #     if y == 0:
+    #         two_players_array.append(choosen_player)
+    #     elif y == 1:
+    #         two_players_array.append(choosen_player)
+    #     y = y + 1
+    # print(two_players_array)
+    # return two_players_array
+
+
+
+
+
+
+
+
+
+
+#_________________________________________________________________________________________________#
 
 
 

@@ -1,6 +1,6 @@
 class Player:
 
-    def __init__(self, number, score : int):
+    def __init__(self, number : int, score : int, matches_history):
     # def __init__(self, familyName, firstName, birthDate, NationalIdentifier):
         self._number = number
         self._score = score
@@ -42,6 +42,18 @@ class Player:
         print(f'{self._score} is now "{value}"')
         self._score = value
     
+    # getter setter for history, an array that stores already encoutered players
+    @property
+    def player_history(self):
+        print(f'"{self._history}" player s score was accessed.')
+        return self._history
+    
+    @player_history.setter
+    def player_history(self, value):
+        print(f'{self._history} is now "{value}"')
+        self._history = value
+
+
     
     
     
