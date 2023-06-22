@@ -36,47 +36,42 @@ def create_a_tournament():
     tours =  controllerTour.create_list_of_tours(nb_of_players)
     print(' ')
     print(tours)
-    for tour in tours:
-    #     # créé x matchs par tour
-        if tour._name == 'tour_n°1':
-            print('c est le premier tour donc on melange les joueurs au hasard')
-            tour_list_matches = controllerMatch.generate_pairs_for_first_tour(players)
+    while nb_of_players > 1:
+        if nb_of_players == 1:
+            break
+        for tour in tours:
+        #     # créé x matchs par tour
+            if tour._name == 'tour_n°1':
+                print('c est le premier tour donc on melange les joueurs au hasard')
+                tour_list_matches = controllerMatch.generate_pairs_for_first_tour(players)
+                for match in tour_list_matches :
+                    tour._array_of_matches.append(match)
+                print(tour._array_of_matches)
+                # on récupère les selectionnés du premier match
+                first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
+                print(first_tour_selected_players)
+                selected_players = first_tour_selected_players
+                newTournament.tournament_number_of_players = len(selected_players)
+                newTournament.tournament_number_of_players
+                print('---------------------------')
+                print('LE PREMIER TOUR EST TERMINE')
+                print('---------------------------')
+            else : 
+                tour._name
+                tour_list_matches = controllerMatch.generate_pairs_for_a_tour(selected_players)
+                for match in tour_list_matches :
+                    tour._array_of_matches.append(match)
+                print(tour._array_of_matches)
+                # on récupère les selectionnés du premier match
+                first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
+                print(first_tour_selected_players)
+                selected_players = first_tour_selected_players
+                newTournament.tournament_number_of_players = len(selected_players)
+                newTournament.tournament_number_of_players
+                print('---------------------------')
+                print('LE PREMIER TOUR' + str(tour._name) + 'EST TERMINE')
+                print('---------------------------')
             
-            for match in tour_list_matches :
-                tour._array_of_matches.append(match)
-            print(tour._array_of_matches)
-            # on récupère les selectionnés du premier match
-            first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
-            print('je suis dans le controller, voici la liste des gagnants du premier tour') 
-            print("-------------")
-            print("-------------")
-            print("-------------")
-            selected_players = first_tour_selected_players
-            print(selected_players)
-            newTournament.tournament_number_of_players = len(selected_players)
-            newTournament.tournament_number_of_players
-            print('la liste des players')    
-            print(tour._array_of_matches)
-            for match in tour._array_of_matches:
-                for player in match._array:
-                    print(player)
-        else : 
-            print('hello')
-            # len(players)
-            # tour.tour_name
-            # tour_list_matches =  controllerMatch.generate_pairs_for_a_tour(players)
-            # for match in tour_list_matches :
-            #     tour._array_of_matches.append(match)
-            # print(tour._array_of_matches)
-            #    # on récupère les selectionnés du premier match
-            # ##################
-            # tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
-            # print('je suis dans le controller, voici la liste des gagnants du tour suivant') 
-            # selected_players = tour_selected_players
-            # print(selected_players)
-            # newTournament.tournament_number_of_players = len(selected_players)
-            # newTournament.tournament_number_of_players
-
             
 
             # list of players = tournament.list
