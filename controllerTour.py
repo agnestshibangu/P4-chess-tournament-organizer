@@ -1,4 +1,8 @@
 from MODELS.tour import Tour
+from colorama import Fore, Back, Style
+from colorama import init
+from VIEW.view import view
+
 
 
 
@@ -11,15 +15,10 @@ def create_list_of_tours(nb_players):
     while nb_players != 1:
         number_of_matchs = round(nb_players/ 2)
         array = []
-        tour = Tour('tour_n°' + str(i), number_of_matchs, array)
-        print(tour._name)
-        print(tour._number_of_matchs)
-        print(tour._array_of_matches)
-        print(tour)
+        tour = Tour('TOUR N°' + str(i), number_of_matchs, array)
         tours.append(tour)
         nb_players = round(nb_players / 2)
         i = i + 1
-    # print('since there are ' + str(initial_number_of_players) + ' players, ' + str(len(tours)) + ' rounds have been created')
     return tours
 
 
@@ -28,35 +27,37 @@ def create_list_of_tours(nb_players):
 #_________________________________________________________________________________________________#
 
 def retreive_single_score(player):
-    while True: 
-        print(player.player_number)
-        print("entrez le score de ce joueur [WIN/LOO/TIE]")
-        result = input()
-        if result == 'w':
-            print('CE JOUEUR A GAGNE LA PARTIE !')
-            player.player_score += 1
-            player.player_score
-            print(' ')
-        elif result == 't':
-            print('PARTIE NULLE')
-            player.player_score += 0.5
-            player.player_score
-            print(' ')
-        elif result == 'l':
-            print('CE JOUEUR A PERDU')
-            player.player_score
-            print(' ')
-        else: 
-            print("WRONG DATA. TRY AGAIN")
-    return player
+      while True: 
+            print("player's number : " + player.player_number)   
+            print("entrez le score de ce joueur [WIN/LOO/TIE]")
+            result = input()
+            if result == 'w':
+                print(Fore.GREEN + 'CE JOUEUR A GAGNE LA PARTIE !')
+                player.player_score += 1
+                player.player_score
+                print(Fore.GREEN + "player's score : " + str(player.player_score))  
+                print(' ')
+            elif result == 't':
+                print(Fore.YELLOW + "PARTIE NULLE" )
+                player.player_score += 0.5
+                player.player_score
+                print(Fore.YELLOW + "player's score : " + str(player.player_score))  
+                print(' ')
+            elif result == 'l':
+                print(Fore.RED + 'CE JOUEUR A PERDU | ELIMINATION')
+                player.player_score
+                print(' ')
+            else: 
+                print(Back.RED + 'MAUVAIS INPUT')
+            return player
 
-#define the highest scores and append to the array of selected players selected = []
+      
+
+#   players_list[0].player_number define the highest scores and append to the array of selected players selected = []
 def largest(score_array):
-
     max = score_array[0].get('score')
     selected_player  = score_array[0]
     n = len(score_array)
-
     for i in range(1, n):
         if score_array[i].get('score') > max:
             max = score_array[i].get('score')
@@ -82,11 +83,11 @@ def get_tour_scores(tour_list_matches):
     copy_list_player = []
     # pour un martch de deux joueurs
     for match in tour_list_matches:
-        print('----------')
+        print(Fore.BLUE + '-----------------------------------------')
         match_array_scores =  match._array
         # génère un tableau qui récuppère tout les scores pour pouvoir les trier et récupèrer les scores les plus élevés
         for player in match_array_scores:
-            retreive_single_score(player)
+            view.retreive_single_score(player)
             # créer une copie de la liste player
             copy_list_player.append(player)
             dict = {'number' : player.player_number, 'score' : player.player_score }
@@ -96,7 +97,9 @@ def get_tour_scores(tour_list_matches):
         score_array.remove(result)
         tour_array_selected.append(result)
     array_selected = sort_players_list_object(tour_array_selected, copy_list_player)
-    print("----- la récupération des points pour ce tour est terminée ----- ")
+    print(Fore.MAGENTA + '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
+    print(Back.MAGENTA + '------ LA RECUPERATION DES POINTS EST TERMINEE POUR CE TOUR ------')
+    print(Fore.MAGENTA +'|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
     return array_selected 
 
 #_________________________________________________________________________________________________#

@@ -39,12 +39,12 @@ class Tournament:
 
     @property
     def tournament_name(self):
-        print(f'"{self._name}" was accessed.')
+        # print(f'"{self._name}" was accessed.')
         return self._name
 
     @tournament_name.setter
     def tournament_name(self, value):
-        print(f'{self._name} is now "{value}"')
+        # print(f'{self._name} is now "{value}"')
         self._name = value
 
     @tournament_name.deleter
@@ -54,12 +54,12 @@ class Tournament:
     
     @property
     def tournament_number_of_players(self):
-        print(f'"{self._number_of_players}" was accessed.')
+        # print(f'"{self._number_of_players}" was accessed.')
         return self._number_of_players
 
     @tournament_number_of_players.setter
     def tournament_number_of_players(self, value):
-        print(f'{self._number_of_players} is now "{value}"')
+        # print(f'{self._number_of_players} is now "{value}"')
         self._number_of_players = value
 
 

@@ -1,81 +1,95 @@
-
-from MODELS.tournament import Tournament 
+from MODELS.tournament import Tournament
 from MODELS.tour import Tour
 from MODELS.match import Match
 import controllerTournament
 import controllerTour
 import controllerMatch
 import controllerPlayer
-import formatage
+import controllerRapport
+from colorama import Fore, Back, Style
+from VIEW.view import view
+
 
 from MODELS.playersData import json_string
 from MODELS.player import Player
 import sys
-import json 
+import json
 
 # ######################################
 
 ##### convertir fichier json en liste #####
 data = json.loads(json_string)
 players_list = data['players']
+
 # ###########################################
 
 # --- creer un nouveau tournois  : TOURNOI
 #     --- la création du tounois engendre x tours en fonction du nombre de participants TOUR
-#         --- chaque tour créer x matchs MATCH 
+#         --- chaque tour créer x matchs MATCH
 #             --- chaque match retourne un resultat
-#     --- on redistribue le nombre de joueurs restants en fonction des resultats 
+#     --- on redistribue le nombre de joueurs restants en fonction des resultats
+
+# generate JSON file
+json_list_player_alpha = controllerRapport.sort_alpha_players(players_list)
+print(json_list_player_alpha)
+controllerRapport.convert_to_json(json_list_player_alpha)
+
+
 def create_a_tournament():
     players = controllerPlayer.create_list_of_players(players_list)
-    print(players)
+    view.display_all_players(players)
     nb_of_players = len(players)
     newTournament = Tournament("tournament", nb_of_players)
     nb_of_players = newTournament.tournament_number_of_players
     newTournament.tournament_name
     # # créé un certain nombre de tours en fonction du nombre de participants
     tours =  controllerTour.create_list_of_tours(nb_of_players)
-    print(' ')
-    print(tours)
     while nb_of_players > 1:
-
         if newTournament.tournament_number_of_players == 1:
-            sys.exit()
+            view.print_final_winner(players)
         for tour in tours:
         #     # créé x matchs par tour
-            if tour._name == 'tour_n°1':
-                print('c est le premier tour donc on melange les joueurs au hasard')
+            if tour._name == 'TOUR N°1':
+                view.print_first_tour_name(tour)
                 tour_list_matches = controllerMatch.generate_pairs_for_first_tour(players)
                 for match in tour_list_matches :
                     tour._array_of_matches.append(match)
-                print(tour._array_of_matches)
+                # print(tour._array_of_matches)
                 # on récupère les selectionnés du premier match
+                view.display_points_retreive_first_tour_start()
                 first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
-                print(first_tour_selected_players)
+                # print(first_tour_selected_players)
                 selected_players = first_tour_selected_players
                 newTournament.tournament_number_of_players = len(selected_players)
                 newTournament.tournament_number_of_players
-                print('---------------------------')
-                print('LE PREMIER TOUR EST TERMINE')
-                print('---------------------------')
-            else : 
+                print('-------------------------')
+                print('LA LISTE DES JOUEURS SELECTIONNES')
+                for player in selected_players:
+                    print("player's number : " + str(player.player_number) + " --- SCORE : " + str(player._score))
+                print('-------------------------')
+            else :
                 tour._name
                 tour_list_matches = controllerMatch.generate_pairs_for_a_tour(selected_players)
+
                 for match in tour_list_matches :
                     tour._array_of_matches.append(match)
-                print(tour._array_of_matches)
+                # print(tour._array_of_matches)
                 # on récupère les selectionnés du premier match
                 first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
                 print(first_tour_selected_players)
                 selected_players = first_tour_selected_players
                 newTournament.tournament_number_of_players = len(selected_players)
                 print('---------------------------')
-                print('LE TOUR' + str(tour._name) + 'EST TERMINE')
-                print('---------------------------')
-                print('the number of players is ')
-                print(newTournament.tournament_number_of_players)
-                
-controllerTournament.start_tournament()
-create_a_tournament() 
+                print(str(tour._name) + 'EST TERMINE')
+
+
+
+# controllerTournament.start_tournament()
+def start():
+    view.prompt_start_tournament()
+start()
+
+create_a_tournament()
 
 
 
@@ -117,11 +131,11 @@ create_a_tournament()
 
 
 
-        
+
 
 #     def create_a_tour():
 #         print('a new tour has been created')
-    
+
 #     def create_list_of_tours():
 #         tours = []
 #         initial_number_of_players = len(players_list)
@@ -136,7 +150,7 @@ create_a_tournament()
 #         print(' ')
 #         print(tours)
 #         print(' ')
-    
+
 #     def display_current_round():
 #         print(' ')
 #         print('current round : Round 1')
@@ -187,7 +201,7 @@ create_a_tournament()
 # #     day = str(x.day)
 # #     currentDate = year + '-' + month + '-' + day
 # #     return str(currentDate)
-    
+
 # # Horodatage()
 # # currentDate = Horodatage()
 
