@@ -1,6 +1,6 @@
 from MODELS.match import Match
 from MODELS.player import Player
-from MODELS.playersData import json_string
+from JSON.playersTournamentData import json_string
 # from getkey import getkey, key
 from colorama import Fore, Back, Style
 from colorama import init
@@ -146,7 +146,6 @@ def generate_pairs_for_first_tour(players):
         print(' ')
         print(Fore.BLUE + '-----------------------------------------')
         for player in match._array:
-            # init(autoreset=True)   
             print("player's number : " + player.player_number)   
         print(Fore.BLUE + '-----------------------------------------')
         # print(match._array)

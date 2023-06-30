@@ -65,6 +65,28 @@ class view:
                 else: 
                     print(Back.RED + 'MAUVAIS INPUT')
                 return player
+        
+            
+    def message_text_all_players():
+        print ('_________________________________________________________________________________________')
+        print (' un nouveau fichier texte contenant les informartions pour tout les joueurs a ete cree ! ')
+        print ('_________________________________________________________________________________________')
+
+    def message_text_tournament_players():
+        print ('____________________________________________________________________________________________________')
+        print (' un nouveau fichier texte contenant les informartions pour tout les joueurs du tournoi a ete cree ! ')
+        print ('____________________________________________________________________________________________________')
 
 
+    def message_text_tournament_infos():
+        print ('____________________________________________________________________________________________________')
+        print (' un nouveau fichier texte contenant les informartions du tournoi en cours a ete cree ! ')
+        print ('____________________________________________________________________________________________________')
+
+
+    
+    def message_text_all_tournament_infos():
+        print ('____________________________________________________________________________________________________')
+        print (' un nouveau fichier texte contenant les informartions de tout les tournois a ete cree ! ')
+        print ('____________________________________________________________________________________________________')
 

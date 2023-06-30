@@ -1,4 +1,4 @@
-from MODELS.playersData import json_string
+from JSON.playersTournamentData import json_string
 from colorama import Fore, Back, Style
 from colorama import init
 

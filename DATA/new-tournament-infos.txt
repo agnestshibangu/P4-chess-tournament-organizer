@@ -1,0 +1,23 @@
+_______________________________________________________
+|                                                      |
+|                  NEW TOURNAMENT INFOS                |
+|                                                      |
+_______________________________________________________
+
+ this is the tournament title : greg
+ this is the date of the tournament : 2023-6-30
+ this is the start time of the tournament : 14:48:41
+
+TOUR N°1
+
+
+           MATCH_N°1
+
+
+           MATCH_N°2
+
+
+           MATCH_N°3
+
+
+           MATCH_N°4

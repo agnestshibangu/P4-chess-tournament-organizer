@@ -41,51 +41,9 @@ json_string = '''
             {
                 "id" : 8,
                 "firstName": "Morgane"
-            },
-            
-            {
-                "id" : 9,
-                "firstName": "Rosalia"
-            },
-            
-            {
-                "id" : 10,
-                "firstName": "Teresa"
-            },
-            
-            {
-                "id" : 11,
-                "firstName": "Maelle"
-            },
-            
-            {
-                "id" : 12,
-                "firstName": "Aya"
-            },
-            
-            {
-                "id" : 13,
-                "firstName": "Angel"
-            },
-            
-            {
-                "id" : 14,
-                "firstName": "Lea"
-            },
-            
-            {
-                "id" : 15,
-                "firstName": "Lea"
-            },
-
-            {
-                "id" : 16,
-                "firstName": "Cecil"
             }
 
         ]
     }
 '''
 
-# data = json.loads(json_string)
-# print(data['players'])

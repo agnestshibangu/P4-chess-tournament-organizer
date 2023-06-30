@@ -1,6 +1,6 @@
 import json
 
-json_string = '''
+json_string_all = '''
     {
         "players": [
             {
@@ -81,11 +81,89 @@ json_string = '''
             {
                 "id" : 16,
                 "firstName": "Cecil"
+            },
+
+            {
+                "id" : 17,
+                "firstName": "Mia"
+            },
+            
+            {
+                "id" : 18,
+                "firstName": "Emma"
+            },
+            
+            {
+                "id" : 19,
+                "firstName": "Olivia"
+            },
+            
+            {
+                "id" : 20,
+                "firstName": "Alice"
+            },
+            
+            {
+                "id" : 21,
+                "firstName": "Charlie"
+            },
+            
+            {
+                "id" : 22,
+                "firstName": "Amelia"
+            },
+            
+            {
+                "id" : 23,
+                "firstName": "Florence"
+            },
+            
+            {
+                "id" : 24,
+                "firstName": "Liam"
+            },
+            
+            {
+                "id" : 25,
+                "firstName": "Thomas"
+            },
+            
+            {
+                "id" : 26,
+                "firstName": "Logan"
+            },
+            
+            {
+                "id" : 27,
+                "firstName": "Nathan"
+            },
+            
+            {
+                "id" : 28,
+                "firstName": "Jacob"
+            },
+            
+            {
+                "id" : 29,
+                "firstName": "Felix"
+            },
+            
+            {
+                "id" : 30,
+                "firstName": "Edouard"
+            },
+            
+            {
+                "id" : 31,
+                "firstName": "Lucas"
+            },
+
+            {
+                "id" : 32,
+                "firstName": "Adam"
             }
 
         ]
     }
 '''
 
-# data = json.loads(json_string)
-# print(data['players'])

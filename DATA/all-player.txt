@@ -1,0 +1,69 @@
+_____________________________________________________
+|                                         |
+|  ALL PLAYERS LIST (by alphabetical order)   |
+|                                         |
+______________________________________________________
+
+'id': 32, 'firstName': 'Adam'
+
+'id': 7, 'firstName': 'Alexia'
+
+'id': 3, 'firstName': 'Alexis'
+
+'id': 20, 'firstName': 'Alice'
+
+'id': 22, 'firstName': 'Amelia'
+
+'id': 13, 'firstName': 'Angel'
+
+'id': 12, 'firstName': 'Aya'
+
+'id': 16, 'firstName': 'Cecil'
+
+'id': 21, 'firstName': 'Charlie'
+
+'id': 30, 'firstName': 'Edouard'
+
+'id': 18, 'firstName': 'Emma'
+
+'id': 29, 'firstName': 'Felix'
+
+'id': 23, 'firstName': 'Florence'
+
+'id': 28, 'firstName': 'Jacob'
+
+'id': 2, 'firstName': 'Julia'
+
+'id': 14, 'firstName': 'Lea'
+
+'id': 15, 'firstName': 'Lea'
+
+'id': 24, 'firstName': 'Liam'
+
+'id': 26, 'firstName': 'Logan'
+
+'id': 31, 'firstName': 'Lucas'
+
+'id': 11, 'firstName': 'Maelle'
+
+'id': 4, 'firstName': 'Max'
+
+'id': 17, 'firstName': 'Mia'
+
+'id': 6, 'firstName': 'Micheal'
+
+'id': 8, 'firstName': 'Morgane'
+
+'id': 27, 'firstName': 'Nathan'
+
+'id': 5, 'firstName': 'Noa'
+
+'id': 19, 'firstName': 'Olivia'
+
+'id': 1, 'firstName': 'Roger'
+
+'id': 9, 'firstName': 'Rosalia'
+
+'id': 10, 'firstName': 'Teresa'
+
+'id': 25, 'firstName': 'Thomas'
