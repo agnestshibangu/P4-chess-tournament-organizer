@@ -3,6 +3,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+
 def sort_alpha_players(players_list):
     def return_first_name(player):
         return player['firstName']
@@ -122,10 +123,7 @@ def text_file_for_tournament():
             f.write(' this is the start time of the tournament : ' + current_time)
             f.write('\n')
          
-            
-
-
-
+        
 
 def text_file_for_all_tournament():
     
@@ -169,7 +167,7 @@ def add_winner_tournament_infos(winner):
 
 
 
-def add_tours_tournament_infos(tour):
+def add_tour_to_tournament_infos(tour):
 
     tourName = tour._name
 
@@ -190,6 +188,11 @@ def add_matchs_tournament_infos(match):
         f.write('\n')
         f.write('\n')
         f.write('           ' + matchName)
+        for player in match._array:   
+            f.write('\n')   
+            f.write('\n')   
+            f.write('           ' + 'player number : ' + player.player_number + '           ' +
+                    'player score |' + str(player.player_score) + '|')
         f.write('\n')
 
 #    for player in match._array:

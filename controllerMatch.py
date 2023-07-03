@@ -134,7 +134,7 @@ def generate_pairs_for_first_tour(players):
         array = chooseTwoPlayers(players)
         # add a player to the other player story
         add_to_history(array)
-        match = Match('MATCH_N°' + str(i), array)
+        match = Match('MATCH_' + str(i), array)
         tour.append(match)
         i = i + 1
     # DISPLAY INFOS ON THE MATCH 

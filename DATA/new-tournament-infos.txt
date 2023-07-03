@@ -4,20 +4,56 @@ _______________________________________________________
 |                                                      |
 _______________________________________________________
 
- this is the tournament title : greg
- this is the date of the tournament : 2023-6-30
- this is the start time of the tournament : 14:48:41
+ this is the tournament title : blabla
+ this is the date of the tournament : 2023-7-3
+ this is the start time of the tournament : 13:31:35
 
 TOUR N°1
 
 
+           MATCH_1
+
+           player number : 7           player score |1|
+
+           player number : 8           player score |0|
+
+
+           MATCH_2
+
+           player number : 2           player score |1|
+
+           player number : 6           player score |0|
+
+
+           MATCH_3
+
+           player number : 3           player score |1|
+
+           player number : 4           player score |0|
+
+
+           MATCH_4
+
+           player number : 5           player score |1|
+
+           player number : 1           player score |0|
+
+
+TOUR N°2
+
+
            MATCH_N°1
+
+           player number : 3           player score |1.5|
+
+           player number : 2           player score |1.5|
 
 
            MATCH_N°2
 
+           player number : 7           player score |2|
 
-           MATCH_N°3
+           player number : 5           player score |1|
 
 
-           MATCH_N°4
+TOUR N°3

@@ -8,19 +8,7 @@ ___________________________________________
 
 'id': 3, 'firstName': 'Alexis'
 
-'id': 13, 'firstName': 'Angel'
-
-'id': 12, 'firstName': 'Aya'
-
-'id': 16, 'firstName': 'Cecil'
-
 'id': 2, 'firstName': 'Julia'
-
-'id': 14, 'firstName': 'Lea'
-
-'id': 15, 'firstName': 'Lea'
-
-'id': 11, 'firstName': 'Maelle'
 
 'id': 4, 'firstName': 'Max'
 
@@ -31,7 +19,3 @@ ___________________________________________
 'id': 5, 'firstName': 'Noa'
 
 'id': 1, 'firstName': 'Roger'
-
-'id': 9, 'firstName': 'Rosalia'
-
-'id': 10, 'firstName': 'Teresa'
