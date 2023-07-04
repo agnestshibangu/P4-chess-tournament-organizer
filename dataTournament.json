@@ -1,12 +1,61 @@
 {
     "tournament": [
-        "TOUR N_1",
-        "TOUR N_2",
-        "TOUR N_3",
-        "TOUR N_1",
-        "TOUR N_1",
-        "TOUR N_1",
-        "TOUR N_1",
-        "TOUR N_1"
+        {
+            "tour": "TOUR N_1",
+            "tour_matches": [
+                {
+                    "matchName": "MATCH_1",
+                    "players": [
+                        [
+                            "player number 8",
+                            "player score 0"
+                        ],
+                        [
+                            "player number 3",
+                            "player score 0"
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_2",
+                    "players": [
+                        [
+                            "player number 1",
+                            "player score 0"
+                        ],
+                        [
+                            "player number 7",
+                            "player score 0"
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_3",
+                    "players": [
+                        [
+                            "player number 6",
+                            "player score 0"
+                        ],
+                        [
+                            "player number 4",
+                            "player score 0"
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_4",
+                    "players": [
+                        [
+                            "player number 2",
+                            "player score 0"
+                        ],
+                        [
+                            "player number 5",
+                            "player score 0"
+                        ]
+                    ]
+                }
+            ]
+        }
     ]
 }

@@ -4,9 +4,9 @@ _______________________________________________________
 |                                                      |
 _______________________________________________________
 
- this is the tournament title : blibli
+ this is the tournament title : fkoepk
  this is the date of the tournament : 2023-7-4
- this is the start time of the tournament : 18:09:29
+ this is the start time of the tournament : 23:46:40
 
 TOUR N_1
-           this is the start time of the tour : 18:09:31
+           this is the start time of the tour : 23:46:41

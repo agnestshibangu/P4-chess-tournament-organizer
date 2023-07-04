@@ -3,23 +3,36 @@ import json
 
 def add_tour_to_tournament_json(tour):
 
-    tourName = tour._name
-    tourNumberMatches = tour._number_of_matchs 
-    tourArrayMatches = tour._array_of_matches
-   
-    print(tourName)
-    print(tourNumberMatches)
+    tour_matchs = []
 
-    print(tourArrayMatches)
-    for match in tourArrayMatches:
-        match._array
+
+    dictionary = {
+        "tour": tour._name,
+        "tour_matches": tour_matchs,
+    }
+
+
+    for match in tour._array_of_matches:
+        matchArray = []
+       
         for player in match._array:
-            print(player._number)
-            print(player._score)
+            playerArray = []
+            playerArray.append("player number " + player._number)
+            playerArray.append("player score " + str(player._score))
+            matchArray.append(playerArray)
 
+        dict = {
+            "matchName" :  match._name,
+            "players" : matchArray
 
+        }
+        dictionary["tour_matches"].append(dict)
+        
+        
+    print(dictionary)
+ 
 
-
+#     # open json file
     with open('dataTournament.json') as json_file:
         data = json.load(json_file)
         print(data)
@@ -29,8 +42,8 @@ def add_tour_to_tournament_json(tour):
     print("tournament:", data['tournament'])
 
 
-    # Serializing json
-    data['tournament'].append(tourName)
+#     # Serializing json
+    data['tournament'].append(dictionary)
     print(data)
 
 #    # Writing to sample.json
