@@ -113,15 +113,7 @@ def add_to_history(array):
             player.player_matches_history.clear()
             player.player_matches_history.append(array[0])
     
-
-
-
-
-
 #_________________________________________________________________________________________________#
-
-
-
 
 
 # genere les matchs pour un tour

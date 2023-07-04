@@ -111,17 +111,17 @@ def text_file_for_tournament():
         f.write(' this is the start time of the tournament : ' + current_time)
 
 
-        path_all_tournaments = 'DATA/all-tournaments.txt'
+    path_all_tournaments = 'DATA/all-tournaments.txt'
 
-        with open(path_all_tournaments, 'a') as f:
-            f.write('_______________________________________________________')
-            f.write('\n')
-            f.write(' this is the tournament title : ' + tournament_title)
-            f.write('\n')
-            f.write(' this is the date of the tournament : ' + date)
-            f.write('\n')
-            f.write(' this is the start time of the tournament : ' + current_time)
-            f.write('\n')
+    with open(path_all_tournaments, 'a') as f:
+        f.write('_______________________________________________________')
+        f.write('\n')
+        f.write(' this is the tournament title : ' + tournament_title)
+        f.write('\n')
+        f.write(' this is the date of the tournament : ' + date)
+        f.write('\n')
+        f.write(' this is the start time of the tournament : ' + current_time)
+        f.write('\n')
          
         
 
@@ -153,7 +153,7 @@ def add_end_time_tournament_infos():
 
     path_all_tournaments = 'DATA/all-tournaments.txt'
     with open(path_all_tournaments, 'a') as f:
-        f.write(' this is the start end of the tournament : ' + current_time)
+        f.write(' this is the end of the tournament : ' + current_time)
         f.write('\n')
 
 
@@ -171,17 +171,25 @@ def add_tour_to_tournament_infos(tour):
 
     tourName = tour._name
 
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+
     path_new_tournaments =  'DATA/new-tournament-infos.txt'
     with open(path_new_tournaments, 'a') as f:
         f.write('\n')
         f.write('\n')
         f.write(tourName)
         f.write('\n')
+        f.write('           this is the start time of the tour : ' + current_time)
+        f.write('\n')
         
 
 def add_matchs_tournament_infos(match):
 
     matchName = match._name
+    
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
 
     path_new_tournaments =  'DATA/new-tournament-infos.txt'
     with open(path_new_tournaments, 'a') as f:
@@ -194,11 +202,16 @@ def add_matchs_tournament_infos(match):
             f.write('           ' + 'player number : ' + player.player_number + '           ' +
                     'player score |' + str(player.player_score) + '|')
         f.write('\n')
+        f.write('\n')
 
-#    for player in match._array:
-#                     match_rapport_input = "player's number : " + player.player_number  
-#                     controllerRapport.add_matchs_tournament_infos(match_rapport_input)
-#                 tour._array_of_matches.append(match)
+def add_end_time_tour_tournament_infos():
 
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
 
-
+    path_new_tournaments =  'DATA/new-tournament-infos.txt'
+    with open(path_new_tournaments, 'a') as f:
+        f.write('\n')
+        f.write('           this is the end time of the tour : ' + current_time)
+        f.write('\n')
+        

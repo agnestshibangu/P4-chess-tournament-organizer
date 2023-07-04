@@ -16,7 +16,6 @@ class view:
                 print(Fore.RED + 'GOOD BYE !')
                 sys.exit()
             else:
-
                 print('invalide answer')
 
     def display_all_players(players):
@@ -43,28 +42,31 @@ class view:
 
     def retreive_single_score(player):
         while True: 
-                print("player's number : " + player.player_number)   
-                print("entrez le score de ce joueur [WIN/LOO/TIE]")
-                result = input()
-                if result == 'w':
-                    print(Fore.GREEN + 'CE JOUEUR A GAGNE LA PARTIE !')
-                    player.player_score += 1
-                    player.player_score
-                    print(Fore.GREEN + "player's score : " + str(player.player_score))  
-                    print(' ')
-                elif result == 't':
-                    print(Fore.YELLOW + "PARTIE NULLE" )
-                    player.player_score += 0.5
-                    player.player_score
-                    print(Fore.YELLOW + "player's score : " + str(player.player_score))  
-                    print(' ')
-                elif result == 'l':
-                    print(Fore.RED + 'CE JOUEUR A PERDU | ELIMINATION')
-                    player.player_score
-                    print(' ')
-                else: 
-                    print(Back.RED + 'MAUVAIS INPUT')
-                return player
+            print("player's number : " + player.player_number)   
+            print("entrez le score de ce joueur [ w = WIN / l = LOO / t = TIE]")
+            result = input()
+            if result == 'w':
+                print(Fore.GREEN + 'CE JOUEUR A GAGNE LA PARTIE !')
+                player.player_score += 1
+                player.player_score
+                print(Fore.GREEN + "player's score : " + str(player.player_score))  
+                print(' ')
+                break
+            elif result == 't':
+                print(Fore.YELLOW + "PARTIE NULLE" )
+                player.player_score += 0.5
+                player.player_score
+                print(Fore.YELLOW + "player's score : " + str(player.player_score))  
+                print(' ')
+                break
+            elif result == 'l':
+                print(Fore.RED + 'CE JOUEUR A PERDU | ELIMINATION')
+                player.player_score
+                print(' ')
+                break
+            else: 
+                print(Back.RED + 'MAUVAIS INPUT')
+        return player
         
             
     def message_text_all_players():

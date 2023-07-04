@@ -15,7 +15,7 @@ def create_list_of_tours(nb_players):
     while nb_players != 1:
         number_of_matchs = round(nb_players/ 2)
         array = []
-        tour = Tour('TOUR N°' + str(i), number_of_matchs, array)
+        tour = Tour('TOUR N_' + str(i), number_of_matchs, array)
         tours.append(tour)
         nb_players = round(nb_players / 2)
         i = i + 1
@@ -29,7 +29,7 @@ def create_list_of_tours(nb_players):
 def retreive_single_score(player):
       while True: 
             print("player's number : " + player.player_number)   
-            print("entrez le score de ce joueur [WIN/LOO/TIE]")
+            print("entrez le score de ce joueur [w = WIN / l =LOO/ t = TIE]")
             result = input()
             if result == 'w':
                 print(Fore.GREEN + 'CE JOUEUR A GAGNE LA PARTIE !')
@@ -49,7 +49,8 @@ def retreive_single_score(player):
                 print(' ')
             else: 
                 print(Back.RED + 'MAUVAIS INPUT')
-            return player
+
+            #return player
 
       
 
