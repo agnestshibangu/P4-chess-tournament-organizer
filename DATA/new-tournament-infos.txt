@@ -4,9 +4,79 @@ _______________________________________________________
 |                                                      |
 _______________________________________________________
 
- this is the tournament title : fkoepk
+ this is the tournament title : vlpre^glr
  this is the date of the tournament : 2023-7-4
- this is the start time of the tournament : 23:46:40
+ this is the start time of the tournament : 23:50:53
 
 TOUR N_1
-           this is the start time of the tour : 23:46:41
+           this is the start time of the tour : 23:50:54
+
+
+           MATCH_1
+
+           player number : 3           player score |1|
+
+           player number : 1           player score |0|
+
+
+
+           MATCH_2
+
+           player number : 6           player score |1|
+
+           player number : 2           player score |0|
+
+
+
+           MATCH_3
+
+           player number : 7           player score |1|
+
+           player number : 4           player score |0|
+
+
+
+           MATCH_4
+
+           player number : 8           player score |1|
+
+           player number : 5           player score |0|
+
+
+           this is the end time of the tour : 23:51:03
+
+
+TOUR N_2
+           this is the start time of the tour : 23:51:03
+
+
+           MATCH_N°1
+
+           player number : 6           player score |2|
+
+           player number : 7           player score |1|
+
+
+
+           MATCH_N°2
+
+           player number : 3           player score |2|
+
+           player number : 8           player score |1|
+
+
+           this is the end time of the tour : 23:51:43
+
+
+TOUR N_3
+           this is the start time of the tour : 23:51:43
+
+
+           MATCH_N°1
+
+           player number : 6           player score |3|
+
+           player number : 3           player score |2|
+
+
+           this is the end time of the tour : 23:51:54

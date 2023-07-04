@@ -54,12 +54,10 @@ def create_a_tournament():
         for match in tour_list_matches:
             tour._array_of_matches.append(match)
         print('JE SUIS LA WESH')
-        # print(tour._name)
-        # for match in tour._array_of_matches:
-        #     print(match._name)
-        controllerJsonFile.add_tour_to_tournament_json(tour)
         view.display_points_retreive_first_tour_start()
         first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
+        # retreive data in json for a tour
+        controllerJsonFile.add_tour_to_tournament_json(tour)
         for match in tour_list_matches:
             controllerRapport.add_matchs_tournament_infos(match)
         controllerRapport.add_end_time_tour_tournament_infos()
