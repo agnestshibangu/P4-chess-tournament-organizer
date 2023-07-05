@@ -1,6 +1,6 @@
 from MODELS.match import Match
 from MODELS.player import Player
-from JSON.playersTournamentData import json_string
+# from JSON.playersTournamentData import json_string
 # from getkey import getkey, key
 from colorama import Fore, Back, Style
 from colorama import init
@@ -10,8 +10,8 @@ import json
 
 # ######################################
 ##### convertir fichier json en liste #####
-data = json.loads(json_string)
-players_list = data['players']
+# data = json.loads(json_string)
+# players_list = data['players']
 # ###########################################
 
 

@@ -20,7 +20,7 @@ import json
 # view.message_text_tournament_players()
 
 # convertir fichier json en liste : liste de tout les joueurs #
-with open('dataTournamentPlayers.json') as json_file:
+with open('JSON/dataTournamentPlayers.json') as json_file:
     data = json.load(json_file)
     all_players_list = data['players']
     players_list = data['players']

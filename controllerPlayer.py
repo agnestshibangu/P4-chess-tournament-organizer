@@ -1,4 +1,4 @@
-from JSON.playersTournamentData import json_string
+# from JSON.playersTournamentData import json_string
 from MODELS.player import Player
 
 import random
@@ -7,8 +7,8 @@ import json
 # ######################################
 
 ##### convertir fichier json en liste #####
-data = json.loads(json_string)
-players_list = data['players']
+# data = json.loads(json_string)
+# players_list = data['players']
 # ###########################################
 
 

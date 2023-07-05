@@ -1,0 +1,11 @@
+___________________________________________
+|                                         |
+|           ALL TOURNAMENTS LIST          |
+|                                         |
+__________________________________________________________________________________________________
+ this is the tournament title : blabla
+ this is the date of the tournament : 2023-7-5
+ this is the start time of the tournament : 16:30:49
+ this is the end of the tournament : 16:31:21
+ winner of the tournament : player num 8
+___________________________________________________________
