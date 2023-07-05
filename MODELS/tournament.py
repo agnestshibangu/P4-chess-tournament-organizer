@@ -1,18 +1,3 @@
-#### importer liste de joueurs #####
-# from MODELS.playersData import json_string
-# import json
-
-# import sys
-# import os
-# import datetime
-
-######################################
-
-##### convertir fichier json en liste #####
-# data = json.loads(json_string)
-# players_list = data['players']
-###########################################
-
 # class Tournament:
    
 #     def __init__(self, name, place, startDate, endDate, current_tour_number, list_of_tours, registered_players_list, 
@@ -62,15 +47,6 @@ class Tournament:
         # print(f'{self._number_of_players} is now "{value}"')
         self._number_of_players = value
 
-
-
-
-
-# def add
-# def getAll
-# def get
-# def update
-# def delete
 
 
     

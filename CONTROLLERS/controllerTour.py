@@ -3,12 +3,6 @@ from colorama import Fore, Back, Style
 from colorama import init
 from VIEW.view import view
 
-
-
-
-#_________________________________________________________________________________________________#
-
-
 def create_list_of_tours(nb_players):
     tours = []
     i = 1
@@ -21,38 +15,9 @@ def create_list_of_tours(nb_players):
         i = i + 1
     return tours
 
-
-#_________________________________________________________________________________________________#
-
-#_________________________________________________________________________________________________#
-
 def retreive_single_score(player):
-      while True: 
-            print("player's number : " + player.player_number)   
-            print("entrez le score de ce joueur [w = WIN / l =LOO/ t = TIE]")
-            result = input()
-            if result == 'w':
-                print(Fore.GREEN + 'CE JOUEUR A GAGNE LA PARTIE !')
-                player.player_score += 1
-                player.player_score
-                print(Fore.GREEN + "player's score : " + str(player.player_score))  
-                print(' ')
-            elif result == 't':
-                print(Fore.YELLOW + "PARTIE NULLE" )
-                player.player_score += 0.5
-                player.player_score
-                print(Fore.YELLOW + "player's score : " + str(player.player_score))  
-                print(' ')
-            elif result == 'l':
-                print(Fore.RED + 'CE JOUEUR A PERDU | ELIMINATION')
-                player.player_score
-                print(' ')
-            else: 
-                print(Back.RED + 'MAUVAIS INPUT')
-
-            #return player
-
-      
+    view.retreive_single_score_view(player)
+    #return player
 
 #   players_list[0].player_number define the highest scores and append to the array of selected players selected = []
 def largest(score_array):
@@ -84,7 +49,7 @@ def get_tour_scores(tour_list_matches):
     copy_list_player = []
     # pour un martch de deux joueurs
     for match in tour_list_matches:
-        print(Fore.BLUE + '-----------------------------------------')
+        view.print_separator()
         match_array_scores =  match._array
         # génère un tableau qui récuppère tout les scores pour pouvoir les trier et récupèrer les scores les plus élevés
         for player in match_array_scores:
@@ -98,12 +63,8 @@ def get_tour_scores(tour_list_matches):
         score_array.remove(result)
         tour_array_selected.append(result)
     array_selected = sort_players_list_object(tour_array_selected, copy_list_player)
-    print(Fore.MAGENTA + '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
-    print(Back.MAGENTA + '------ LA RECUPERATION DES POINTS EST TERMINEE POUR CE TOUR ------')
-    print(Fore.MAGENTA +'|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
-    return array_selected 
-
-#_________________________________________________________________________________________________#
+    view.display_points_retreive_first_tour_end()
+    return array_selected
 
 
 

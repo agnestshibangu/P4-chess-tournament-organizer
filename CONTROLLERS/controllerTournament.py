@@ -1,15 +1,8 @@
-from JSON.playersTournamentData import json_string
 from colorama import Fore, Back, Style
 from colorama import init
 
 import sys
 import json
-# ######################################
-
-# ##### convertir fichier json en liste #####
-data = json.loads(json_string)
-players_list = data['players']
-# ##########################################
 
 def start_tournament():
     while True:         
@@ -28,10 +21,7 @@ def start_tournament():
     # créer un objet tournoi
 
 
-def number_of_player():
-    nb_players = len(players_list)
-    print('the tournament has ' + str(nb_players) + ' players')
-    return nb_players
+
 
 
 

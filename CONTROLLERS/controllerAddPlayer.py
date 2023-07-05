@@ -22,6 +22,6 @@ def add_a_new_player():
                                 indent=4,
                                 separators=(',',': '))
         
-add_a_new_player()
+
     
 

@@ -1,6 +1,5 @@
 import json
 
-
 def add_tour_to_tournament_json(tour):
 
     tour_matchs = []

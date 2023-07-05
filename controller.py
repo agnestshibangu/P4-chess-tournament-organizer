@@ -1,9 +1,9 @@
 from MODELS.tournament import Tournament
-import controllerTour as controllerTour
-import controllerMatch as controllerMatch
-import controllerPlayer as controllerPlayer
-import controllerRapport as controllerRapport
-import controllerJsonFile as controllerJsonFile 
+import CONTROLLERS.controllerTour as controllerTour
+import CONTROLLERS.controllerMatch as controllerMatch
+import CONTROLLERS.controllerPlayer as controllerPlayer
+import CONTROLLERS.controllerRapport as controllerRapport
+import CONTROLLERS.controllerJsonFile as controllerJsonFile 
 from VIEW.view import view
 import json
 
@@ -38,9 +38,7 @@ def create_a_tournament():
     nb_of_players = len(players)
     newTournament = Tournament("tournament", nb_of_players)
     nb_of_players = newTournament.tournament_number_of_players
-    
     tours = controllerTour.create_list_of_tours(nb_of_players)
-
     for tour in tours:
         if tour._name == 'TOUR N_1' :
             view.print_first_tour_name(tour)
@@ -53,7 +51,6 @@ def create_a_tournament():
             tour_list_matches = controllerMatch.generate_pairs_for_a_tour(selected_players)        
         for match in tour_list_matches:
             tour._array_of_matches.append(match)
-        print('JE SUIS LA WESH')
         view.display_points_retreive_first_tour_start()
         first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
         # retreive data in json for a tour
@@ -67,8 +64,8 @@ def create_a_tournament():
             winner = str(selected_players[0].player_number)
             controllerRapport.add_end_time_tournament_infos()
             controllerRapport.add_winner_tournament_infos(winner)
-            print('LE GAGNANT EST :'+str(selected_players))
-            print("LE GAGNANT EST : player's number :"+str(selected_players[0].player_number))
+            view.print_winner(selected_players)
+            
 
 
 # controllerTournament.start_tournament()

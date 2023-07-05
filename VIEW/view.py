@@ -92,3 +92,59 @@ class view:
         print (' un nouveau fichier texte contenant les informartions de tout les tournois a ete cree ! ')
         print ('____________________________________________________________________________________________________')
 
+    # VIEWS FOR THE CONTROLLER MATCHES
+
+    def message_player_same_as_history():
+        print (' ce joueur figure deja dans l historique, un autre joueur va etre selectionne ')
+
+    def print_infos_for_each_match(tour):
+        for match in tour:
+            print(' ')
+            print(' ')
+            init(autoreset=True)    
+            print(Fore.BLUE + match._name)
+            print(' ')
+            print(Fore.BLUE + '-----------------------------------------')
+        for player in match._array:
+            print("player's number : " + player.player_number)   
+        print(Fore.BLUE + '-----------------------------------------')
+
+    def display_points_retreive_first_tour_end():
+        print(Fore.MAGENTA + '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
+        print(Back.MAGENTA + '------ LA RECUPERATION DES POINTS EST TERMINEE POUR CE TOUR ------')
+        print(Fore.MAGENTA +'|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
+
+    def print_separator():
+        print(Fore.BLUE + '-----------------------------------------')
+
+    # controller tour
+    def retreive_single_score_view(player):
+        while True: 
+                print("player's number : " + player.player_number)   
+                print("entrez le score de ce joueur [w = WIN / l =LOO/ t = TIE]")
+                result = input()
+                if result == 'w':
+                    print(Fore.GREEN + 'CE JOUEUR A GAGNE LA PARTIE !')
+                    player.player_score += 1
+                    player.player_score
+                    print(Fore.GREEN + "player's score : " + str(player.player_score))  
+                    print(' ')
+                elif result == 't':
+                    print(Fore.YELLOW + "PARTIE NULLE" )
+                    player.player_score += 0.5
+                    player.player_score
+                    print(Fore.YELLOW + "player's score : " + str(player.player_score))  
+                    print(' ')
+                elif result == 'l':
+                    print(Fore.RED + 'CE JOUEUR A PERDU | ELIMINATION')
+                    player.player_score
+                    print(' ')
+                else: 
+                    print(Back.RED + 'MAUVAIS INPUT')
+
+    # display winner of tournament: 
+    def print_winner(selected_players):
+        print('\n')
+        print(Fore.GREEN + '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
+        print("LE GAGNANT EST : player's number :"+str(selected_players[0].player_number))
+        print(Fore.GREEN + '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')

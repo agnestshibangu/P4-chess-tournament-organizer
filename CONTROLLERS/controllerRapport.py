@@ -32,7 +32,6 @@ def convert_to_text_all_players(sorted_list):
         f.write('______________________________________________________')
         f.write('\n')
         for line in sorted_list:
-            print(str(line).replace("{","").replace("}", ""))
             f.write('\n')
             f.write(str(line).replace("{","").replace("}", ""))
             f.write('\n')
@@ -58,15 +57,12 @@ def convert_to_text_tournament_players(sorted_list):
         f.write('___________________________________________')
         f.write('\n')
         for line in sorted_list:
-            print(str(line).replace("{","").replace("}", ""))
             f.write('\n')
             f.write(str(line).replace("{","").replace("}", ""))
             f.write('\n')
 
 
 def text_file_for_tournament():
-
-    info_tournament_array = []
 
     # recuperer la date 
     def Horodatage():
@@ -90,7 +86,6 @@ def text_file_for_tournament():
     path = 'REPORT/new-tournament-infos.txt'
 
     tournament_title = input("Entrez un nom pour le tournoi: ")
-    print(tournament_title)
     
     with open(path, 'w') as f:
         f.write('_______________________________________________________')
@@ -189,7 +184,7 @@ def add_matchs_tournament_infos(match):
     matchName = match._name
     
     now = datetime.now()
-    current_time = now.strftime("%H:%M:%S")
+    # current_time = now.strftime("%H:%M:%S")
 
     path_new_tournaments =  'REPORT/new-tournament-infos.txt'
     with open(path_new_tournaments, 'a') as f:
