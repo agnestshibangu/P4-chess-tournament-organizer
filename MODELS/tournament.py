@@ -30,7 +30,6 @@ class Tournament:
     def tournament_name(self):
         print(f'"{self._name}" was deleted')
 
-    
     @property
     def tournament_number_of_players(self):
         # print(f'"{self._number_of_players}" was accessed.')
@@ -40,19 +39,3 @@ class Tournament:
     def tournament_number_of_players(self, value):
         # print(f'{self._number_of_players} is now "{value}"')
         self._number_of_players = value
-
-
-
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
