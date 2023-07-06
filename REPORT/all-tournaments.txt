@@ -68,4 +68,10 @@ _______________________________________________________
  this is the start time of the tournament : 14:55:59
  this is the end of the tournament : 14:56:18
  winner of the tournament : player num 2
+__________________________________________________________________________________________________________________
+ this is the tournament title : blabl
+ this is the date of the tournament : 2023-7-6
+ this is the start time of the tournament : 17:16:46
+ this is the end of the tournament : 17:16:58
+ winner of the tournament : player num 4
 ___________________________________________________________

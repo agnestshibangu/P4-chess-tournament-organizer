@@ -85,20 +85,20 @@ class View:
     # @staticmethod
     def message_text_all_players():
         print('________________________________________________'
-        '____________________________________________________')
+              '____________________________________________________')
         print(' un nouveau fichier texte contenant les' +
               'informartions pour tout les joueurs a ete cree ! ')
         print('________________________________________________'
-        '____________________________________________________')
+              '____________________________________________________')
 
     # @staticmethod
     def message_text_tournament_players():
         print('________________________________________________'
-        '____________________________________________________')
+              '____________________________________________________')
         print(' un nouveau fichier texte contenant les' +
               'informartions pour tout les joueurs du tournoi a ete cree ! ')
         print('________________________________________________'
-        '____________________________________________________')
+              '____________________________________________________')
 
     # @staticmethod
     def message_text_tournament_infos():
@@ -112,11 +112,11 @@ class View:
     # @staticmethod
     def message_text_all_tournament_infos():
         print('________________________________________________'
-        '____________________________________________________')
+              '____________________________________________________')
         print(' un nouveau fichier texte contenant les' +
               ' informartions de tout les tournois a ete cree ! ')
         print('________________________________________________'
-        '____________________________________________________')
+              '____________________________________________________')
 
     # VIEWS FOR THE CONTROLLER MATCHES
     # @staticmethod
@@ -160,13 +160,15 @@ class View:
                 print(Fore.GREEN + 'CE JOUEUR A GAGNE LA PARTIE !')
                 player.player_score += 1
                 player.player_score
-                print(Fore.GREEN + "player's score : " + str(player.player_score))
+                print(Fore.GREEN + "player's score : "
+                      + str(player.player_score))
                 print(' ')
             elif result == 't':
                 print(Fore.YELLOW + "PARTIE NULLE")
                 player.player_score += 0.5
                 player.player_score
-                print(Fore.YELLOW + "player's score : " + str(player.player_score))
+                print(Fore.YELLOW + "player's score : "
+                      + str(player.player_score))
                 print(' ')
             elif result == 'l':
                 print(Fore.RED + 'CE JOUEUR A PERDU | ELIMINATION')
