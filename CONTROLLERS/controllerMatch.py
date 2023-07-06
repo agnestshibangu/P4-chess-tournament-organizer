@@ -3,23 +3,17 @@ from MODELS.player import Player
 from VIEW.view import View
 import random
 
-
-# fonction pour le test a retirer
-def create_list_of_players(players_list):
-    players = []
-    i = 1
-    score = 0
-    for player in players_list:
-        player = Player('player_n°' + str(i), score, matches_history=[])
-        players.append(player)
-        i = i + 1
-    return players
-
 # pour le premier tour, on peut choisir les joueurs au hasard
+
+# pour les tours suivants on classe les joueurs :
+#   * en fonction du nombre de points
+#   * associer les joueurs dans l'ordre
+#   * si plus de 2 joueurs ont le meme score, on les associent au hasard
+#   * éviter les matchs identiques
 
 
 # choose two players and create a tuple
-def choose_two_players(players):
+def choose_two_players_first_tour(players):
     two_players_array = []
     y = 1
     for y in range(2):
@@ -32,15 +26,9 @@ def choose_two_players(players):
         y = y + 1
     return two_players_array
 
-# pour les tours suivants on classe les joueurs :
-#   * en fonction du nombre de points
-#   * associer les joueurs dans l'ordre
-#   * si plus de 2 joueurs ont le meme score, on les associent au hasard
-#   * éviter les matchs identiques
-
 
 # choose two players and create a tuple
-def choose_two_players_othertours(players):
+def choose_two_players_other_tours(players):
     two_players_array = []
     first_player = random.choice(players)
     players.remove(first_player)
@@ -74,7 +62,7 @@ def generate_pairs_for_first_tour(players):
     tour = []
     i = 1
     for x in range(number_of_pairs):
-        array = choose_two_players(players)
+        array = choose_two_players_first_tour(players)
         # add a player to the other player story
         add_to_history(array)
         match = Match('MATCH_' + str(i), array)
@@ -91,7 +79,7 @@ def generate_pairs_for_a_tour(players):
     tour = []
     i = 1
     for x in range(number_of_pairs):
-        array = choose_two_players_othertours(players)
+        array = choose_two_players_other_tours(players)
         add_to_history(array)
         match = Match('MATCH_N°' + str(i), array)
         tour.append(match)

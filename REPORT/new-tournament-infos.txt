@@ -4,79 +4,79 @@ _______________________________________________________
 |                                                      |
 _______________________________________________________
 
- this is the tournament title : blabl
+ this is the tournament title : blabla
  this is the date of the tournament : 2023-7-6
- this is the start time of the tournament : 17:16:46
+ this is the start time of the tournament : 17:26:29
 
 TOUR N_1
-           this is the start time of the tour : 17:16:48
+           this is the start time of the tour : 17:26:31
 
 
            MATCH_1
 
-           player number : 8           player score |1|
+           player number : player_n°3           player score |1|
 
-           player number : 3           player score |0|
+           player number : player_n°2           player score |0|
 
 
 
            MATCH_2
 
-           player number : 2           player score |1|
+           player number : player_n°8           player score |1|
 
-           player number : 5           player score |0|
+           player number : player_n°7           player score |0|
 
 
 
            MATCH_3
 
-           player number : 1           player score |1|
+           player number : player_n°6           player score |1|
 
-           player number : 7           player score |0|
+           player number : player_n°1           player score |0|
 
 
 
            MATCH_4
 
-           player number : 4           player score |1|
+           player number : player_n°4           player score |1|
 
-           player number : 6           player score |0|
+           player number : player_n°5           player score |0|
 
 
-           this is the end time of the tour : 17:16:53
+           this is the end time of the tour : 17:26:35
 
 
 TOUR N_2
-           this is the start time of the tour : 17:16:53
+           this is the start time of the tour : 17:26:35
 
 
            MATCH_N°1
 
-           player number : 1           player score |2|
+           player number : player_n°3           player score |2|
 
-           player number : 2           player score |1|
+           player number : player_n°8           player score |1|
 
 
 
            MATCH_N°2
 
-           player number : 4           player score |2|
+           player number : player_n°6           player score |2|
 
-           player number : 8           player score |1|
+           player number : player_n°4           player score |1|
 
 
-           this is the end time of the tour : 17:16:56
+           this is the end time of the tour : 17:26:37
 
 
 TOUR N_3
-           this is the start time of the tour : 17:16:56
+           this is the start time of the tour : 17:26:37
 
 
            MATCH_N°1
 
-           player number : 4           player score |3|
+           player number : player_n°3           player score |3|
 
-           player number : 1           player score |2|
+           player number : player_n°6           player score |2|
 
 
-           this is the end time of the tour : 17:16:58
+           this is the end time of the tour : 17:26:39

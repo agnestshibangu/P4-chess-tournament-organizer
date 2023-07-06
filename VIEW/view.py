@@ -6,6 +6,9 @@ import sys
 class View:
     # class view:
 
+
+     # @staticmethod
+
     # @staticmethod
     def prompt_start_tournament():
         while True:
@@ -186,3 +189,5 @@ class View:
               str(selected_players[0].player_number))
         print(Fore.GREEN + '||||||||||||||||||||||||||||' +
               '||||||||||||||||||||||||||||||||||||||')
+        
+    

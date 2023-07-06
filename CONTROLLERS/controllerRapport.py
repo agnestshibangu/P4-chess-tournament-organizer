@@ -3,6 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 
+# PLAYERS infos report TEXT FORMAT
 def sort_alpha_players(players_list):
     def return_first_name(player):
         return player['firstName']
@@ -58,7 +59,7 @@ def convert_to_text_tournament_players(sorted_list):
             f.write(str(line).replace("{", "").replace("}", ""))
             f.write('\n')
 
-
+# TOURNAMENT infos report JSON FORMAT
 def text_file_for_tournament():
     def Horodatage():
         x = datetime.now()
@@ -113,6 +114,7 @@ def text_file_for_tournament():
         f.write('\n')
 
 
+# ALL TOURNAMENT infos report TEXT FORMAT
 def text_file_for_all_tournament():
 
     path = Path('REPORT/all-tournaments.txt')
