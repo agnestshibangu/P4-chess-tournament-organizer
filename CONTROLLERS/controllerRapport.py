@@ -1,5 +1,4 @@
 import os
-import time
 from datetime import datetime
 from pathlib import Path
 
@@ -8,12 +7,11 @@ def sort_alpha_players(players_list):
     def return_first_name(player):
         return player['firstName']
     players_list.sort(key=return_first_name)
-    sorted_list =  players_list
+    sorted_list = players_list
     return sorted_list
 
 
 def convert_to_text_all_players(sorted_list):
-
     directory = "REPORT"
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -23,22 +21,21 @@ def convert_to_text_all_players(sorted_list):
     with open(path, 'w') as f:
         f.write('_____________________________________________________')
         f.write('\n')
-        f.write('|                                         |')
+        f.write('|                                                    |')
         f.write('\n')
-        f.write('|  ALL PLAYERS LIST (by alphabetical order)   |')
+        f.write('|    ALL PLAYERS LIST (by alphabetical order)        |')
         f.write('\n')
-        f.write('|                                         |')
+        f.write('|                                                    |')
         f.write('\n')
         f.write('______________________________________________________')
         f.write('\n')
         for line in sorted_list:
             f.write('\n')
-            f.write(str(line).replace("{","").replace("}", ""))
+            f.write(str(line).replace("{", "").replace("}", ""))
             f.write('\n')
 
 
 def convert_to_text_tournament_players(sorted_list):
-
     directory = "REPORT"
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -46,25 +43,23 @@ def convert_to_text_tournament_players(sorted_list):
     path = 'REPORT/tournament-player.txt'
 
     with open(path, 'w') as f:
-        f.write('___________________________________________')
+        f.write('______________________________________________________')
         f.write('\n')
-        f.write('|                                         |')
+        f.write('|                                                     |')
         f.write('\n')
         f.write('|   TOURNAMENT PLAYERS LIST (by alphabetical order)   |')
         f.write('\n')
-        f.write('|                                         |')
+        f.write('|                                                     |')
         f.write('\n')
-        f.write('___________________________________________')
+        f.write('_____________________________________________________')
         f.write('\n')
         for line in sorted_list:
             f.write('\n')
-            f.write(str(line).replace("{","").replace("}", ""))
+            f.write(str(line).replace("{", "").replace("}", ""))
             f.write('\n')
 
 
 def text_file_for_tournament():
-
-    # recuperer la date 
     def Horodatage():
         x = datetime.now()
         year = str(x.year)
@@ -72,10 +67,10 @@ def text_file_for_tournament():
         day = str(x.day)
         currentDate = year + '-' + month + '-' + day
         return str(currentDate)
-    
+
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-    
+
     Horodatage()
     date = Horodatage()
 
@@ -86,7 +81,7 @@ def text_file_for_tournament():
     path = 'REPORT/new-tournament-infos.txt'
 
     tournament_title = input("Entrez un nom pour le tournoi: ")
-    
+
     with open(path, 'w') as f:
         f.write('_______________________________________________________')
         f.write('\n')
@@ -105,7 +100,6 @@ def text_file_for_tournament():
         f.write('\n')
         f.write(' this is the start time of the tournament : ' + current_time)
 
-
     path_all_tournaments = 'REPORT/all-tournaments.txt'
 
     with open(path_all_tournaments, 'a') as f:
@@ -117,13 +111,11 @@ def text_file_for_tournament():
         f.write('\n')
         f.write(' this is the start time of the tournament : ' + current_time)
         f.write('\n')
-         
-        
+
 
 def text_file_for_all_tournament():
-    
-    path = Path('REPORT/all-tournaments.txt')   
 
+    path = Path('REPORT/all-tournaments.txt')
     if path.is_file():
         return "exists"
     else:
@@ -138,14 +130,11 @@ def text_file_for_all_tournament():
             f.write('\n')
             f.write('___________________________________________')
             f.write('\n')
-      
 
 
 def add_end_time_tournament_infos():
-
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-
     path_all_tournaments = 'REPORT/all-tournaments.txt'
     with open(path_all_tournaments, 'a') as f:
         f.write(' this is the end of the tournament : ' + current_time)
@@ -153,7 +142,6 @@ def add_end_time_tournament_infos():
 
 
 def add_winner_tournament_infos(winner):
-
     path_all_tournaments = 'REPORT/all-tournaments.txt'
     with open(path_all_tournaments, 'a') as f:
         f.write(' winner of the tournament : player num ' + winner)
@@ -161,52 +149,49 @@ def add_winner_tournament_infos(winner):
         f.write('___________________________________________________________')
 
 
-
 def add_tour_to_tournament_infos(tour):
-
-    tourName = tour._name
-
+    tour_name = tour._name
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-
-    path_new_tournaments =  'REPORT/new-tournament-infos.txt'
+    path_new_tournaments = 'REPORT/new-tournament-infos.txt'
     with open(path_new_tournaments, 'a') as f:
         f.write('\n')
         f.write('\n')
-        f.write(tourName)
+        f.write(tour_name)
         f.write('\n')
-        f.write('           this is the start time of the tour : ' + current_time)
+        f.write('           this is the start time of the tour : ' +
+                current_time)
         f.write('\n')
-        
+
 
 def add_matchs_tournament_infos(match):
 
-    matchName = match._name
-    
-    now = datetime.now()
+    match_name = match._name
+
+    # now = datetime.now()
     # current_time = now.strftime("%H:%M:%S")
 
-    path_new_tournaments =  'REPORT/new-tournament-infos.txt'
+    path_new_tournaments = 'REPORT/new-tournament-infos.txt'
     with open(path_new_tournaments, 'a') as f:
         f.write('\n')
         f.write('\n')
-        f.write('           ' + matchName)
-        for player in match._array:   
-            f.write('\n')   
-            f.write('\n')   
-            f.write('           ' + 'player number : ' + player.player_number + '           ' +
-                    'player score |' + str(player.player_score) + '|')
+        f.write('           ' + match_name)
+        for player in match._array:
+            f.write('\n')
+            f.write('\n')
+            f.write('           ' + 'player number : ' + player.player_number +
+                    '           ' + 'player score |'
+                    + str(player.player_score) + '|')
         f.write('\n')
         f.write('\n')
+
 
 def add_end_time_tour_tournament_infos():
-
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-
-    path_new_tournaments =  'REPORT/new-tournament-infos.txt'
+    path_new_tournaments = 'REPORT/new-tournament-infos.txt'
     with open(path_new_tournaments, 'a') as f:
         f.write('\n')
-        f.write('           this is the end time of the tour : ' + current_time)
+        f.write('           this is the end time of the tour : ' +
+                current_time)
         f.write('\n')
-        

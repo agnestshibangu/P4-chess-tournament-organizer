@@ -1,6 +1,6 @@
 class Player:
 
-    def __init__(self, number : int, score : int, matches_history : list):
+    def __init__(self, number: int, score: int, matches_history: list):
     # def __init__(self, familyName, firstName, birthDate, NationalIdentifier):
         self._number = number
         self._score = score
@@ -9,11 +9,6 @@ class Player:
         # self._birthDate = birthDate
         # self._NationalIdentifier = NationalIdentifier
   
-    #-----------------------------------------------------------------------
-    #        Methods
-    #-----------------------------------------------------------------------
-
-    # getter setter for number
 
     @property
     def player_number(self):
@@ -31,8 +26,6 @@ class Player:
         del self._number
 
     
-    # getter setter for score
-
     @property
     def player_score(self):
         # print(f'"{self._score}" player s score was accessed.')

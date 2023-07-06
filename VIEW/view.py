@@ -2,8 +2,10 @@ from colorama import Fore, Back, Style
 from colorama import init
 import sys
 
-class view:
+class View:
+#class view:
  
+    # @staticmethod
     def prompt_start_tournament():
         while True:         
             init(autoreset=True)    
@@ -18,21 +20,25 @@ class view:
             else:
                 print('invalide answer')
 
+    # @staticmethod
     def display_all_players(players):
         print('The list of players')
         for player in players:
             print('player num ' + str(player.player_number))
 
+    # @staticmethod
     def print_final_winner(players):
         print('LE GAGNANT EST LE JOUEUR NUMERO ' + str(players[0]))
         print('LE TOURNOI EST TERMINE !!!!')
         sys.exit()
 
+    # @staticmethod
     def print_first_tour_name(tour):
         print(' ')
         print(Back.BLUE + tour._name)
         print('c est le premier tour donc on melange les joueurs au hasard')
 
+    # @staticmethod
     def display_points_retreive_first_tour_start():
         print(' ')
         print(Fore.MAGENTA + '|||||||||||||||||||||||||||||||||||||||||||||||||||||')
@@ -40,6 +46,7 @@ class view:
         print(Fore.MAGENTA +'|||||||||||||||||||||||||||||||||||||||||||||||||||||')
         print(' ')
 
+    # @staticmethod
     def retreive_single_score(player):
         while True: 
             print("player's number : " + player.player_number)   
@@ -68,35 +75,36 @@ class view:
                 print(Back.RED + 'MAUVAIS INPUT')
         return player
         
-            
+    # @staticmethod 
     def message_text_all_players():
         print ('_________________________________________________________________________________________')
         print (' un nouveau fichier texte contenant les informartions pour tout les joueurs a ete cree ! ')
         print ('_________________________________________________________________________________________')
 
+    # @staticmethod
     def message_text_tournament_players():
         print ('____________________________________________________________________________________________________')
         print (' un nouveau fichier texte contenant les informartions pour tout les joueurs du tournoi a ete cree ! ')
         print ('____________________________________________________________________________________________________')
 
-
+    # @staticmethod
     def message_text_tournament_infos():
         print ('____________________________________________________________________________________________________')
         print (' un nouveau fichier texte contenant les informartions du tournoi en cours a ete cree ! ')
         print ('____________________________________________________________________________________________________')
 
-
-    
+    # @staticmethod
     def message_text_all_tournament_infos():
         print ('____________________________________________________________________________________________________')
         print (' un nouveau fichier texte contenant les informartions de tout les tournois a ete cree ! ')
         print ('____________________________________________________________________________________________________')
 
     # VIEWS FOR THE CONTROLLER MATCHES
-
+    # @staticmethod
     def message_player_same_as_history():
         print (' ce joueur figure deja dans l historique, un autre joueur va etre selectionne ')
 
+    # @staticmethod
     def print_infos_for_each_match(tour):
         for match in tour:
             print(' ')
@@ -109,15 +117,17 @@ class view:
             print("player's number : " + player.player_number)   
         print(Fore.BLUE + '-----------------------------------------')
 
+    # @staticmethod
     def display_points_retreive_first_tour_end():
         print(Fore.MAGENTA + '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
         print(Back.MAGENTA + '------ LA RECUPERATION DES POINTS EST TERMINEE POUR CE TOUR ------')
         print(Fore.MAGENTA +'|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
 
+    # @staticmethod
     def print_separator():
         print(Fore.BLUE + '-----------------------------------------')
 
-    # controller tour
+    # @staticmethod
     def retreive_single_score_view(player):
         while True: 
                 print("player's number : " + player.player_number)   
@@ -142,7 +152,7 @@ class view:
                 else: 
                     print(Back.RED + 'MAUVAIS INPUT')
 
-    # display winner of tournament: 
+    # @staticmethod
     def print_winner(selected_players):
         print('\n')
         print(Fore.GREEN + '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')

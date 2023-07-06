@@ -1,26 +1,20 @@
 # class Tournament:
-   
-#     def __init__(self, name, place, startDate, endDate, current_tour_number, list_of_tours, registered_players_list, 
-#         notes_description, number_of_tours="4"):
-#         self.name = name
-#         self.place = place
-#         self.startDate = startDate
-#         self.endDate = endDate
-#         self.current_tour_number = current_tour_number
-#         self.list_of_tours = list_of_tours
-#         self.registered_players_list = registered_players_list
-#         self.notes_description = notes_description
-#         self.number_of_tours = number_of_tours
-
 class Tournament:
+    #     def __init__(self, name, place, startDate, endDate, current_tour_number, list_of_tours, registered_players_list, 
+    #         notes_description, number_of_tours="4"):
+    #         self.name = name
+    #         self.place = place
+    #         self.startDate = startDate
+    #         self.endDate = endDate
+    #         self.current_tour_number = current_tour_number
+    #         self.list_of_tours = list_of_tours
+    #         self.registered_players_list = registered_players_list
+    #         self.notes_description = notes_description
+    #         self.number_of_tours = number_of_tours
 
     def __init__(self, name:str, number_of_players):
         self._name = name
         self._number_of_players = number_of_players
-
-#-----------------------------------------------------------------------
-#        Methods
-#-----------------------------------------------------------------------
 
     @property
     def tournament_name(self):

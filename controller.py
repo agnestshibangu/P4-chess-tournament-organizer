@@ -4,7 +4,7 @@ import CONTROLLERS.controllerMatch as controllerMatch
 import CONTROLLERS.controllerPlayer as controllerPlayer
 import CONTROLLERS.controllerRapport as controllerRapport
 import CONTROLLERS.controllerJsonFile as controllerJsonFile 
-from VIEW.view import view
+from VIEW.view import View
 import json
 
 # CONTROLLER POUR LES RAPPORTS 
@@ -27,21 +27,21 @@ with open('JSON/dataTournamentPlayers.json') as json_file:
 # players list for the main controller
 # infos for all tournaments
 controllerRapport.text_file_for_all_tournament()
-view.message_text_all_tournament_infos()
+View.message_text_all_tournament_infos()
 
 def create_a_tournament():
     # infos for single tournament
     controllerRapport.text_file_for_tournament()
-    view.message_text_tournament_infos()
+    View.message_text_tournament_infos()
     players = controllerPlayer.create_list_of_players(players_list)
-    view.display_all_players(players)
+    View.display_all_players(players)
     nb_of_players = len(players)
     newTournament = Tournament("tournament", nb_of_players)
     nb_of_players = newTournament.tournament_number_of_players
     tours = controllerTour.create_list_of_tours(nb_of_players)
     for tour in tours:
         if tour._name == 'TOUR N_1' :
-            view.print_first_tour_name(tour)
+            View.print_first_tour_name(tour)
             controllerRapport.add_tour_to_tournament_infos(tour)
             #append tour to JSON file
             tour_list_matches = controllerMatch.generate_pairs_for_first_tour(players)
@@ -51,7 +51,7 @@ def create_a_tournament():
             tour_list_matches = controllerMatch.generate_pairs_for_a_tour(selected_players)        
         for match in tour_list_matches:
             tour._array_of_matches.append(match)
-        view.display_points_retreive_first_tour_start()
+        View.display_points_retreive_first_tour_start()
         first_tour_selected_players = controllerTour.get_tour_scores(tour_list_matches)
         # retreive data in json for a tour
         controllerJsonFile.add_tour_to_tournament_json(tour)
@@ -64,13 +64,13 @@ def create_a_tournament():
             winner = str(selected_players[0].player_number)
             controllerRapport.add_end_time_tournament_infos()
             controllerRapport.add_winner_tournament_infos(winner)
-            view.print_winner(selected_players)
+            View.print_winner(selected_players)
             
 
 
 # controllerTournament.start_tournament()
 def start():
-    view.prompt_start_tournament()
+    View.prompt_start_tournament()
 start()
 
 create_a_tournament()

@@ -1,22 +1,17 @@
-# class Tour:
-
-#     def __init__(self, name, date, match_list, startTime, endTime):
-#         self.name = name
-#         self.date = date
-#         self.match_list = match_list
-#         self.startTime = startTime
-#         self.endTime = endTime
-
 class Tour:
+
+    #     def __init__(self, name, date, match_list, startTime, endTime):
+    #         self.name = name
+    #         self.date = date
+    #         self.match_list = match_list
+    #         self.startTime = startTime
+    #         self.endTime = endTime
 
     def __init__(self, name, number_of_matchs, array_of_matches):
         self._name = name
         self._number_of_matchs = number_of_matchs
         self._array_of_matches = array_of_matches
 
-#-----------------------------------------------------------------------
-#        Methods
-#-----------------------------------------------------------------------
 
     @property
     def tour_name(self):
