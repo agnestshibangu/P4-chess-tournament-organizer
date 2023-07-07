@@ -136,9 +136,9 @@ class View:
             print(Fore.BLUE + match._name)
             print(' ')
             print(Fore.BLUE + '-----------------------------------------')
-        for player in match._array:
-            print("player's number : " + player.player_number)
-        print(Fore.BLUE + '-----------------------------------------')
+            for player in match._array:
+                print(player.player_number)
+            print(Fore.BLUE + '-----------------------------------------')
 
     # @staticmethod
     def display_points_retreive_first_tour_end():
@@ -185,7 +185,7 @@ class View:
         print('\n')
         print(Fore.GREEN + '||||||||||||||||||||||||||||' +
               '||||||||||||||||||||||||||||||||||||||')
-        print("LE GAGNANT EST : player's number :" +
+        print("LE GAGNANT EST : " +
               str(selected_players[0].player_number))
         print(Fore.GREEN + '||||||||||||||||||||||||||||' +
               '||||||||||||||||||||||||||||||||||||||')

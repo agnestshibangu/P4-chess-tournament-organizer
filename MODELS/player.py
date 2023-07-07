@@ -1,13 +1,17 @@
 class Player:
 
-    def __init__(self, number: int, score: int, matches_history: list):
-    # def __init__(self, familyName, firstName, birthDate, NationalIdentifier):
+    def __init__(self, number: int, family_name: str, first_name: str,
+                birth_date: str, national_identifier: str, score: int,
+                matches_history: list):
         self._number = number
+        self._family_name = family_name
+        self._first_name = first_name
+        self._birth_date = birth_date
+        self._national_identifier = national_identifier
+        self._birthDate = birth_date
+        self._NationalIdentifier = national_identifier
         self._score = score
         self._matches_history = matches_history
-        # self._firstName = firstName
-        # self._birthDate = birthDate
-        # self._NationalIdentifier = NationalIdentifier
 
     @property
     def player_number(self):

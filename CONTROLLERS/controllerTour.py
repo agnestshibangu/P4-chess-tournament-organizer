@@ -1,14 +1,28 @@
 from MODELS.tour import Tour
 from VIEW.view import View
+from datetime import datetime
 
 
 def create_list_of_tours(nb_players):
+  
+    x = datetime.now()
+    year = str(x.year)
+    month = str(x.month)
+    day = str(x.day)
+    date = year + '-' + month + '-' + day
+
     tours = []
     i = 1
+    start_time = "startime"
+    end_time = "endtime"
+    
     while nb_players != 1:
-        number_of_matchs = round(nb_players / 2)
-        array = []
-        tour = Tour('TOUR N_' + str(i), number_of_matchs, array)
+        number_of_matches = round(nb_players / 2)
+        array_of_matches = []
+        # array = []
+        tour = Tour('TOUR N_' + str(i), date, number_of_matches, array_of_matches,
+                    start_time, end_time)
+        # tour = Tour('TOUR N_' + str(i), number_of_matches, array)
         tours.append(tour)
         nb_players = round(nb_players / 2)
         i = i + 1
