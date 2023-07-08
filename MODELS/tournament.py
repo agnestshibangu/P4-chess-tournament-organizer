@@ -1,5 +1,12 @@
 # class Tournament:
 class Tournament:
+
+    '''This is a class method for creating a tour that has 7 attributes attributes : a name, a place,
+    a start date, an ending date, a current tour number, a list of tours, a registered players list, 
+    an attributes for notes on the tournament, and a number of tours. It has some getter/setter properties
+    to access, set and delete the mentionned attributes above.
+    '''
+
     #     def __init__(self, name, place, startDate, endDate, current_tour_number, list_of_tours, registered_players_list, 
     #         notes_description, number_of_tours="4"):
     #         self.name = name

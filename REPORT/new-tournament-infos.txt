@@ -4,9 +4,47 @@ _______________________________________________________
 |                                                      |
 _______________________________________________________
 
- this is the tournament title : vlporogr
- this is the date of the tournament : 2023-7-7
- this is the start time of the tournament : 14:14:47
+ this is the tournament title : blqblq
+ this is the date of the tournament : 2023-7-8
+ this is the start time of the tournament : 22:42:05
 
 TOUR N_1
-           this is the start time of the tour : 14:14:49
+           this is the start time of the tour : 22:42:07
+
+
+           MATCH_1
+
+           player number : player_n°3           player score |1|
+
+           player number : player_n°1           player score |0|
+
+
+
+           MATCH_2
+
+           player number : player_n°8           player score |1|
+
+           player number : player_n°7           player score |0|
+
+
+
+           MATCH_3
+
+           player number : player_n°2           player score |1|
+
+           player number : player_n°6           player score |0|
+
+
+
+           MATCH_4
+
+           player number : player_n°4           player score |1|
+
+           player number : player_n°5           player score |0|
+
+
+           this is the end time of the tour : 22:42:17
+
+
+TOUR N_2
+           this is the start time of the tour : 22:42:17

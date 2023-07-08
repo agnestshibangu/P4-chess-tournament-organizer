@@ -2,6 +2,10 @@ from MODELS.player import Player
 
 
 def create_list_of_players(players_list):
+    ''' This function takes as a parameter the players_list, and retrieve for each players
+    the data from the list to pass it to the player object as attributes and append the new 
+    player object that has been create to the list players.
+    '''
     players = []
     i = 0
     for player in players_list:   

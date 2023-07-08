@@ -1,4 +1,9 @@
 class Player:
+    '''This is a class method for creating a player that has 7 attributes attributes : a number,
+    a family name, a first name, a birth date, a national identifier, a score and an array for 
+    the match historic. It has some getter/setter properties
+    to access, set and delete the mentionned attributes above.
+    '''
 
     def __init__(self, number: int, family_name: str, first_name: str,
                 birth_date: str, national_identifier: str, score: int,
@@ -8,8 +13,6 @@ class Player:
         self._first_name = first_name
         self._birth_date = birth_date
         self._national_identifier = national_identifier
-        self._birthDate = birth_date
-        self._NationalIdentifier = national_identifier
         self._score = score
         self._matches_history = matches_history
 

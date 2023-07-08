@@ -1,4 +1,8 @@
 class Tour:
+    '''This is a class method for creating a tour that has 7 attributes attributes : a name, a date,
+    a number of matches, an array of matches, a start time and an end time. It has some getter/setter properties
+    to access, set and delete the mentionned attributes above.
+    '''
 
     def __init__(self, name, date, number_of_matchs, array_of_matches, start_time, end_time):
         self._name = name

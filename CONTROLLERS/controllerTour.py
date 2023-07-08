@@ -4,6 +4,13 @@ from datetime import datetime
 
 
 def create_list_of_tours(nb_players):
+    ''' this function creates a number of tours based on the number of players,
+    it calculates the number of matches by dividing the number of players by 2
+    until the number of players is equal to 1. each tour that is being added to the list
+    of tours is being stored as an object from the MODELS named Tour and takes as an attribute
+    a number, a date, a number of matches, a start time and an end time 
+    ('TOUR N_' + str(i), date, number_of_matches, array_of_matches, start_time, end_time)
+    '''
   
     x = datetime.now()
     year = str(x.year)
@@ -30,6 +37,8 @@ def create_list_of_tours(nb_players):
 
 
 def retreive_single_score(player):
+    ''' this function simply calls the view method retreive_single_score_view(player) that takes as a parameter 
+    the list of players to ask to user an score input for each player  '''
     View.retreive_single_score_view(player)
     # return player
 
@@ -37,6 +46,10 @@ def retreive_single_score(player):
 # players_list[0].player_number define the highest scores and append to the
 # array of selected players selected = []
 def largest(score_array):
+    ''' This function has a max_score that is initialized at the first value of the array score_array[0].
+    for i in range of n the length of the array, if the score of the current player is superior to the value
+    max_score, the player who has that max score becomes the selected_player value and is being returned. 
+    '''
     max_score = score_array[0].get('score')
     selected_player = score_array[0]
     n = len(score_array)
@@ -48,6 +61,11 @@ def largest(score_array):
 
 
 def sort_players_list_object(tour_array_selected, copy_list_player):
+    ''' for i in range of 0 to the length of the array tour_array_selected, if a player in the array
+    copy_list_player happens to have the same number as in the list tour_array_selected, it means that 
+    the player has been selected, so it is added to the array_select. The array_selected is being return 
+    and contains the data of the selected players.
+    '''
     n = len(tour_array_selected)
     array_selected = []
     for player in copy_list_player:
