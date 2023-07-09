@@ -3,16 +3,7 @@ from MODELS.player import Player
 from VIEW.view import View
 import random
 
-# pour le premier tour, on peut choisir les joueurs au hasard
 
-# pour les tours suivants on classe les joueurs :
-#   * en fonction du nombre de points
-#   * associer les joueurs dans l'ordre
-#   * si plus de 2 joueurs ont le meme score, on les associent au hasard
-#   * éviter les matchs identiques
-
-
-# choose two players and create a tuple
 def choose_two_players_first_tour(players):
     ''' This function create an array --> two_players_array = [], choose two random 
     players from the list in parameter players. It removes the choosen player from the list

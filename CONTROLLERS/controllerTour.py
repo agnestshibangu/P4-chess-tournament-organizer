@@ -79,6 +79,18 @@ def sort_players_list_object(tour_array_selected, copy_list_player):
 # cette fonction itère sur les matchs du premier tour, récupère les scores de
 # chaque joueurs et créé un tableau des joueurs séléctionnés
 def get_tour_scores(tour_list_matches):
+    ''' This function creates 3 arrays score_array = [], tour_array_selected = [], copy_list_player = []
+    for every matches in tour_list_matches, it retreives the array of the match --> match._array and for each 
+    player contained in the array, the function retreive_single_score(player) asks for the input of the user 
+    for each player and append the player to the array copy_list_player. Then it creates a dictionary called
+    player_dict with the number and the score of the player, and pass it so it can be updated to the json file 
+    of the tournament with the function controllerJsonFile.get_player_score_from_json(player_dict). It is also
+    append to the array --> score_array[]. while the length of the tour_array_selected is inferior to 
+    tour_list_matches, the highest score is retreive with the function largest(score_array) in the score_array.
+    Then it is removed from the array and append to the tour_array_selected. Then it returns as a view that the 
+    retreiving of the points is over.
+    '''
+
     # tableau des joueurs gagnants du premier tour
     score_array = []
     tour_array_selected = []
@@ -96,7 +108,6 @@ def get_tour_scores(tour_list_matches):
             player_dict = {'number': player.player_number,
                     'score': player.player_score}
             controllerJsonFile.get_player_score_from_json(player_dict)
-            # controllerJsonFile.get_single_player_dict_for_json(player_dict)
             score_array.append(player_dict)     
     while len(tour_array_selected) < len(tour_list_matches):
         result = largest(score_array)

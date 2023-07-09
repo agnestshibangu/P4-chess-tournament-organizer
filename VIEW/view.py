@@ -8,6 +8,10 @@ class View:
 
     # @staticmethod
     def prompt_start_tournament():
+
+        ''' This function ask for the user input. 'Y' to start a tournament and 
+        'N' to quit the program. If the input is neither 'Y' or 'N', it exits the program.
+        '''
         while True:
             init(autoreset=True)
             print(Back.GREEN + 'Voulez-vous démarrer un tournoi ? [Y/N]')
@@ -23,18 +27,28 @@ class View:
 
     # @staticmethod
     def display_all_players(players):
+
+        ''' This function takes as parameter players and displays them with their number. 
+        '''
         print('The list of players')
         for player in players:
             print('player num ' + str(player.player_number))
 
     # @staticmethod
     def print_final_winner(players):
+        
+        ''' This function takes as parameter players when len(players) == 1
+        and displays the winner.
+        '''
         print('LE GAGNANT EST LE JOUEUR NUMERO ' + str(players[0]))
         print('LE TOURNOI EST TERMINE !!!!')
         sys.exit()
 
     # @staticmethod
     def print_first_tour_name(tour):
+        
+        ''' This function takes as parameter tour and displays the name of the tour
+        '''
         print(' ')
         print(Back.BLUE + tour._name)
         print('c est le premier tour donc on melange les joueurs au hasard')
@@ -52,9 +66,17 @@ class View:
 
     # @staticmethod
     def retreive_single_score(player):
+
+        ''' This function asks for the input of the user to get and calculate the score for each player.
+        'w' means that the player won and his score is incremented by 1.  'l' means that the player lost
+        and his score is not incremented. 't' means that the players has a tie and his score is incremented 
+        with 0.5 points. If the input is neither of the above, a message 'wrong input' is displayed and the user
+        has to input something valid.
+        '''
+        
         while True:
             print("player's number : " + player.player_number)
-            print('entrez le score de ce joueur' +
+            print('Entrez le score de ce joueur' +
                   '[ w = WIN / l = LOO / t = TIE]')
             result = input()
             if result == 'w':
