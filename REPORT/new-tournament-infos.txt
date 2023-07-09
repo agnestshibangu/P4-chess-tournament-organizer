@@ -4,47 +4,47 @@ _______________________________________________________
 |                                                      |
 _______________________________________________________
 
- this is the tournament title : blqblq
- this is the date of the tournament : 2023-7-8
- this is the start time of the tournament : 22:42:05
+ this is the tournament title : gropgkr
+ this is the date of the tournament : 2023-7-9
+ this is the start time of the tournament : 11:19:06
 
 TOUR N_1
-           this is the start time of the tour : 22:42:07
+           this is the start time of the tour : 11:19:07
 
 
            MATCH_1
 
-           player number : player_n°3           player score |1|
+           player number : player_n°6           player score |1|
 
-           player number : player_n°1           player score |0|
+           player number : player_n°2           player score |0|
 
 
 
            MATCH_2
 
-           player number : player_n°8           player score |1|
+           player number : player_n°7           player score |1|
 
-           player number : player_n°7           player score |0|
+           player number : player_n°4           player score |0|
 
 
 
            MATCH_3
 
-           player number : player_n°2           player score |1|
+           player number : player_n°5           player score |1|
 
-           player number : player_n°6           player score |0|
+           player number : player_n°3           player score |0|
 
 
 
            MATCH_4
 
-           player number : player_n°4           player score |1|
+           player number : player_n°8           player score |1|
 
-           player number : player_n°5           player score |0|
+           player number : player_n°1           player score |0|
 
 
-           this is the end time of the tour : 22:42:17
+           this is the end time of the tour : 11:19:12
 
 
 TOUR N_2
-           this is the start time of the tour : 22:42:17
+           this is the start time of the tour : 11:19:12

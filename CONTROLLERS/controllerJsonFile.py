@@ -22,8 +22,8 @@ def add_tour_to_tournament_json(tour):
         matchArray = []
         for player in match._array:
             playerArray = []
-            playerArray.append("player number " + player._number)
-            playerArray.append("player score " + str(player._score))
+            playerArray.append({"player number " : player._number})
+            playerArray.append({"player score " : str(player._score)})
             matchArray.append(playerArray)
 
         match_dict = {
@@ -42,3 +42,21 @@ def add_tour_to_tournament_json(tour):
     filename = 'JSON/dataTournament.json'
     with open(filename, 'w') as json_file:
         json.dump(data, json_file, indent=4, separators=(',', ': '))
+
+
+def get_player_score_from_json():
+    score = 1
+    with open('../JSON/dataTournament.json') as json_file:
+        data = json.load(json_file)
+    for i in data['tournament']:
+        for i in i['tour_matches']:
+            print(i["matchName"])
+            for i in i['players']:
+                print(i[1])
+                i[1]["player score "] = score 
+                print(i[1])
+            
+             
+def get_single_player_dict_for_json(player_dict):
+    print(player_dict)
+

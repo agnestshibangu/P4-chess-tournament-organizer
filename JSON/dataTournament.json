@@ -7,12 +7,20 @@
                     "matchName": "MATCH_1",
                     "players": [
                         [
-                            "player number player_n\u00b03",
-                            "player score 1"
+                            {
+                                "player number ": "player_n\u00b04"
+                            },
+                            {
+                                "player score ": "0"
+                            }
                         ],
                         [
-                            "player number player_n\u00b01",
-                            "player score 0"
+                            {
+                                "player number ": "player_n\u00b03"
+                            },
+                            {
+                                "player score ": "0"
+                            }
                         ]
                     ]
                 },
@@ -20,12 +28,20 @@
                     "matchName": "MATCH_2",
                     "players": [
                         [
-                            "player number player_n\u00b08",
-                            "player score 1"
+                            {
+                                "player number ": "player_n\u00b07"
+                            },
+                            {
+                                "player score ": "0"
+                            }
                         ],
                         [
-                            "player number player_n\u00b07",
-                            "player score 0"
+                            {
+                                "player number ": "player_n\u00b05"
+                            },
+                            {
+                                "player score ": "0"
+                            }
                         ]
                     ]
                 },
@@ -33,12 +49,20 @@
                     "matchName": "MATCH_3",
                     "players": [
                         [
-                            "player number player_n\u00b02",
-                            "player score 1"
+                            {
+                                "player number ": "player_n\u00b08"
+                            },
+                            {
+                                "player score ": "0"
+                            }
                         ],
                         [
-                            "player number player_n\u00b06",
-                            "player score 0"
+                            {
+                                "player number ": "player_n\u00b01"
+                            },
+                            {
+                                "player score ": "0"
+                            }
                         ]
                     ]
                 },
@@ -46,12 +70,245 @@
                     "matchName": "MATCH_4",
                     "players": [
                         [
-                            "player number player_n\u00b04",
-                            "player score 1"
+                            {
+                                "player number ": "player_n\u00b06"
+                            },
+                            {
+                                "player score ": "0"
+                            }
                         ],
                         [
-                            "player number player_n\u00b05",
-                            "player score 0"
+                            {
+                                "player number ": "player_n\u00b02"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "tour": "TOUR N_1",
+            "tour_matches": [
+                {
+                    "matchName": "MATCH_1",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b03"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b04"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_2",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b06"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b01"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_3",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b07"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b08"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_4",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b05"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b02"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "tour": "TOUR N_1",
+            "tour_matches": [
+                {
+                    "matchName": "MATCH_1",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b06"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b02"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_2",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b07"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b04"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_3",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b05"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b03"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_4",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b08"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b01"
+                            },
+                            {
+                                "player score ": "0"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "tour": "TOUR N_2",
+            "tour_matches": [
+                {
+                    "matchName": "MATCH_N\u00b01",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b05"
+                            },
+                            {
+                                "player score ": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b07"
+                            },
+                            {
+                                "player score ": "1"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "matchName": "MATCH_N\u00b02",
+                    "players": [
+                        [
+                            {
+                                "player number ": "player_n\u00b08"
+                            },
+                            {
+                                "player score ": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "player number ": "player_n\u00b06"
+                            },
+                            {
+                                "player score ": "1"
+                            }
                         ]
                     ]
                 }

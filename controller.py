@@ -51,16 +51,18 @@ def create_a_tournament():
                                 players)
         else:
             controllerRapport.add_tour_to_tournament_infos(tour)
+            
             # append tour to JSON file
             tour_list_matches = controllerMatch.generate_pairs_for_a_tour(
                                 selected_players)
         for match in tour_list_matches:
             tour._array_of_matches.append(match)
+        controllerJsonFile.add_tour_to_tournament_json(tour)
         View.display_points_retreive_first_tour_start()
         first_tour_selected_players = controllerTour.get_tour_scores(
                                       tour_list_matches)
         # retreive data in json for a tour
-        controllerJsonFile.add_tour_to_tournament_json(tour)
+        # controllerJsonFile.add_tour_to_tournament_json(tour)
         for match in tour_list_matches:
             controllerRapport.add_matchs_tournament_infos(match)
         controllerRapport.add_end_time_tour_tournament_infos()

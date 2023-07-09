@@ -1,6 +1,7 @@
 from MODELS.tour import Tour
 from VIEW.view import View
 from datetime import datetime
+import CONTROLLERS.controllerJsonFile as controllerJsonFile
 
 
 def create_list_of_tours(nb_players):
@@ -92,9 +93,14 @@ def get_tour_scores(tour_list_matches):
             View.retreive_single_score(player)
             # créer une copie de la liste player
             copy_list_player.append(player)
-            dict = {'number': player.player_number,
+            player_dict = {'number': player.player_number,
                     'score': player.player_score}
-            score_array.append(dict)
+            print(player_dict)
+            score_array.append(player_dict)
+            
+            
+
+            
     while len(tour_array_selected) < len(tour_list_matches):
         result = largest(score_array)
         score_array.remove(result)
