@@ -95,12 +95,9 @@ def get_tour_scores(tour_list_matches):
             copy_list_player.append(player)
             player_dict = {'number': player.player_number,
                     'score': player.player_score}
-            print(player_dict)
-            score_array.append(player_dict)
-            
-            
-
-            
+            controllerJsonFile.get_player_score_from_json(player_dict)
+            # controllerJsonFile.get_single_player_dict_for_json(player_dict)
+            score_array.append(player_dict)     
     while len(tour_array_selected) < len(tour_list_matches):
         result = largest(score_array)
         score_array.remove(result)

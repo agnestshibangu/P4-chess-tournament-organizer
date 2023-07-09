@@ -16,8 +16,8 @@ def create_list_of_players(players_list):
         player_national_identifier = players_list[i]['nationalIdentifier']
         score = 0
         # # number, score, firstname, matcheshistory, birthdate, nationalidentifier
-        # player = Player('player_n°' + str(player_number),  player_family_name, player_first_name,
-        player = Player('player_n°' + str(player_number),  player_family_name, player_first_name,
+        # player = Player('player_°' + str(player_number),  player_family_name, player_first_name,
+        player = Player(str(player_number),  player_family_name, player_first_name,
                         player_birth_date, player_national_identifier, score, matches_history=[])
         players.append(player)
         i = i + 1
