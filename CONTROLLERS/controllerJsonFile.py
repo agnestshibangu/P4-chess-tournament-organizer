@@ -2,6 +2,7 @@ import json
 
 
 def add_tour_to_tournament_json(tour):
+    
     ''' This function takes as a parameter the object tour, creates a dictionary and append
     to it the name and an empty array that will contain the number of matches for this tour
     and append to it all of the matches that are stored in his attribute .array_of_matches
@@ -46,6 +47,12 @@ def add_tour_to_tournament_json(tour):
 
 def get_player_score_from_json(player_dict):
     
+    ''' This function takes as a parameter the dictionary --> player_dict, loop through 
+    the data of the tour until the rigth player is found 
+    with --> if i[0]["player number"] == player_dict['number'] and update the new score
+    of the player.
+    '''
+
     print(player_dict)
     print(player_dict['score'])
     print(player_dict['number'])
