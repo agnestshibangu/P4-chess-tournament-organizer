@@ -12,7 +12,6 @@ class Tour:
         self._start_time = start_time
         self._end_time = end_time
 
-    # NAME
     @property
     def tour_name(self):
         print(f'"{self._name}" was accessed.')
@@ -33,24 +32,6 @@ class Tour:
     def tour_date(self, value):
         print(f'{self._date} is now "{value}"')
         self._date = value
-   
-
-
-
-
-
-
-    # NUMBER OF MATCHES
-    @property
-    def tour_number_of_matchs(self):
-        # print(f'"{self._number_of_matchs }" was accessed.')
-        return self._number_of_matchs
-
-    @tour_number_of_matchs.setter
-    def tour_number_of_matchs(self, value):
-        # print(f'{self._number_of_matchs } is now "{value}"')
-        self._number_of_matchs = value
-
 
     @property
     def tour_number_of_matchs(self):
@@ -62,6 +43,15 @@ class Tour:
         # print(f'{self._number_of_matchs } is now "{value}"')
         self._number_of_matchs = value
 
+    @property
+    def tour_number_of_matchs(self):
+        # print(f'"{self._number_of_matchs }" was accessed.')
+        return self._number_of_matchs
+
+    @tour_number_of_matchs.setter
+    def tour_number_of_matchs(self, value):
+        # print(f'{self._number_of_matchs } is now "{value}"')
+        self._number_of_matchs = value
 
     @property
     def tour_number_of_matchs(self):

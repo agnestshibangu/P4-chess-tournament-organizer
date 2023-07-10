@@ -4,12 +4,10 @@ import sys
 
 
 class View:
-    
 
-    # @staticmethod
     def prompt_start_tournament():
 
-        ''' This function ask for the user input. 'Y' to start a tournament and 
+        ''' This function ask for the user input. 'Y' to start a tournament and
         'N' to quit the program. If the input is neither 'Y' or 'N', it exits the program.
         '''
         while True:
@@ -19,7 +17,7 @@ class View:
             if data == 'Y':
                 print(Fore.GREEN + 'STARTING A NEW TOURNAMENT...')
                 break
-            elif data == 'N': 
+            elif data == 'N':
                 print(Fore.RED + 'GOOD BYE !')
                 sys.exit()
             else:
@@ -28,7 +26,7 @@ class View:
     # @staticmethod
     def display_all_players(players):
 
-        ''' This function takes as parameter players and displays them with their number. 
+        ''' This function takes as parameter players and displays them with their number.
         '''
         print('The list of players')
         for player in players:
@@ -36,7 +34,7 @@ class View:
 
     # @staticmethod
     def print_final_winner(players):
-        
+
         ''' This function takes as parameter players when len(players) == 1
         and displays the winner.
         '''
@@ -46,7 +44,7 @@ class View:
 
     # @staticmethod
     def print_first_tour_name(tour):
-        
+
         ''' This function takes as parameter tour and displays the name of the tour
         '''
         print(' ')
@@ -69,11 +67,11 @@ class View:
 
         ''' This function asks for the input of the user to get and calculate the score for each player.
         'w' means that the player won and his score is incremented by 1.  'l' means that the player lost
-        and his score is not incremented. 't' means that the players has a tie and his score is incremented 
+        and his score is not incremented. 't' means that the players has a tie and his score is incremented
         with 0.5 points. If the input is neither of the above, a message 'wrong input' is displayed and the user
         has to input something valid.
         '''
-        
+
         while True:
             print("player's number : " + player.player_number)
             print('Entrez le score de ce joueur' +
@@ -149,9 +147,9 @@ class View:
     # @staticmethod
     def print_infos_for_each_match(tour):
         ''' This function takes as a parameter a tour object and displays
-        the attriburtes for each matches that are contained in this tour. 
-        the number player --> player.player_number is being displayed for 
-        each player for each match.   
+        the attriburtes for each matches that are contained in this tour.
+        the number player --> player.player_number is being displayed for
+        each player for each match.
         '''
         for match in tour:
             print(' ')
@@ -166,7 +164,7 @@ class View:
 
     # @staticmethod
     def display_points_retreive_first_tour_end():
-     
+
         print(Fore.MAGENTA + '||||||||||||||||||||||||||||' +
               '||||||||||||||||||||||||||||||||||||||')
         print(Back.MAGENTA + '------ LA RECUPERATION DES' +
@@ -182,8 +180,8 @@ class View:
     def retreive_single_score_view(player):
         ''' this function is called in the controllerTour.
         is display for each player his number --> player.player_number,
-        and takes an input that determines the new score to be attributed 
-        to the player score. 
+        and takes an input that determines the new score to be attributed
+        to the player score.
         input w = win = 1 point / l = loose = 0 / t = tie = 0.5
         if the input is different from this 3 values, the score is aked again
         '''
@@ -216,8 +214,8 @@ class View:
     # @staticmethod
     def print_winner(selected_players):
         ''' This function is called when the length of selected_players (the parameter)
-        is equal to 1. it then takes the first argument of the list and print the number 
-        of the remaining player wich is the winner. 
+        is equal to 1. it then takes the first argument of the list and print the number
+        of the remaining player wich is the winner.
         '''
 
         print('\n')
@@ -227,5 +225,3 @@ class View:
               str(selected_players[0].player_number))
         print(Fore.GREEN + '||||||||||||||||||||||||||||' +
               '||||||||||||||||||||||||||||||||||||||')
-        
-    

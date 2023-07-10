@@ -21,9 +21,6 @@ class Match:
     def match_name(self):
         print(f'"{self._name}" was deleted')
 
-
-
-
     @property
     def match_array(self):
         # print(f'{self._name}" was accessed.')

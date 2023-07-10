@@ -36,7 +36,7 @@ def create_a_tournament():
 
     ''' When a new tournament starts, a text file containing all of the infos of this tournament is added,
     then a player list is created based on the players stored un the JSON file dataTournamentPlayers.json.
-    A new tournament is created, with the number of players as a parameter to calculate the number of tours 
+    A new tournament is created, with the number of players as a parameter to calculate the number of tours
     and matches. Then a list of tours is created.
     '''
     controllerRapport.text_file_for_tournament()
@@ -47,9 +47,9 @@ def create_a_tournament():
     newTournament = Tournament("tournament", nb_of_players)
     nb_of_players = newTournament.tournament_number_of_players
     tours = controllerTour.create_list_of_tours(nb_of_players)
-    ''' for the first tour, the controllerRapport allows to add infos on the tour to the tournament 
-    infos text file. Then from the controller Match, random pairs are generated with the  
-    generate_pairs_for_first_tour() function that takes as a parameter the list of players. 
+    ''' for the first tour, the controllerRapport allows to add infos on the tour to the tournament
+    infos text file. Then from the controller Match, random pairs are generated with the
+    generate_pairs_for_first_tour() function that takes as a parameter the list of players.
     '''
     for tour in tours:
         if tour._name == 'TOUR N_1':
@@ -59,18 +59,17 @@ def create_a_tournament():
             tour_list_matches = controllerMatch.generate_pairs_for_first_tour(
                                 players)
         else:
-            ''' for the other tours, pairs are generated based on the player's history, if they 
+            ''' for the other tours, pairs are generated based on the player's history, if they
             have already played against the player that is stored in their array history, the program
-            will select another player for the new tour. 
+            will select another player for the new tour.
             '''
             controllerRapport.add_tour_to_tournament_infos(tour)
-            
-            # append tour to JSON file
             tour_list_matches = controllerMatch.generate_pairs_for_a_tour(
                                 selected_players)
+
             ''' for every matches of the tour, the new match is append to the array tour._array_of_matches
             Then the infos of the tour are appended to the json file. Then based on the return of the function
-            get_tour_scores(tour_list_matches), an array of the sleected players is created. 
+            get_tour_scores(tour_list_matches), an array of the sleected players is created.
             '''
 
         for match in tour_list_matches:
@@ -81,10 +80,10 @@ def create_a_tournament():
                                       tour_list_matches)
         # retreive data in json for a tour
         # controllerJsonFile.add_tour_to_tournament_json(tour)
-        ''' for each match, the data is added to the text report, the end time is added. 
+        ''' for each match, the data is added to the text report, the end time is added.
         An other tour is generated until the number of selected players is equal to one.
         In the case a function to display the winner in the view is called and the data
-        of the end of tournament is added to the text and json file. 
+        of the end of tournament is added to the text and json file.
         '''
         for match in tour_list_matches:
             controllerRapport.add_matchs_tournament_infos(match)

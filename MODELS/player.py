@@ -1,13 +1,13 @@
 class Player:
     '''This is a class method for creating a player that has 7 attributes attributes : a number,
-    a family name, a first name, a birth date, a national identifier, a score and an array for 
+    a family name, a first name, a birth date, a national identifier, a score and an array for
     the match historic. It has some getter/setter properties
     to access, set and delete the mentionned attributes above.
     '''
 
     def __init__(self, number: int, family_name: str, first_name: str,
-                birth_date: str, national_identifier: str, score: int,
-                matches_history: list):
+                 birth_date: str, national_identifier: str, score: int,
+                 matches_history: list):
         self._number = number
         self._family_name = family_name
         self._first_name = first_name
@@ -30,7 +30,7 @@ class Player:
     def player_number(self):
         # print(f'"{self._number}" was deleted')
         del self._number
-    
+
     @property
     def player_score(self):
         # print(f'"{self._score}" player s score was accessed.')
@@ -51,8 +51,3 @@ class Player:
     def player_matches_history(self, value):
         # print(f'{self._matches_history} is now "{value}"')
         self._matches_history = value
-
-
-    
-    
-    
